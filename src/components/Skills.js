@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import { FaReact, FaNodeJs, FaJs, FaCss3Alt, FaPython, FaDatabase, FaGitAlt } from "react-icons/fa";
+import { FaReact, FaNodeJs, FaJs, FaCss3Alt, FaDatabase, FaGitAlt, FaJava, FaAws, FaGoogle, FaCuttlefish } from "react-icons/fa";
+import { SiSpringboot, SiMongodb } from "react-icons/si";
 import "./Skills.css";
 
 const skills = [
@@ -7,9 +8,14 @@ const skills = [
   { name: "Node.js", icon: <FaNodeJs /> },
   { name: "JavaScript", icon: <FaJs /> },
   { name: "CSS", icon: <FaCss3Alt /> },
-  { name: "Python", icon: <FaPython /> },
   { name: "SQL", icon: <FaDatabase /> },
   { name: "Git", icon: <FaGitAlt /> },
+  { name: "Java", icon: <FaJava /> },
+  { name: "MongoDB", icon: <SiMongodb /> },
+  { name: "C/C++", icon: <FaCuttlefish /> },
+  { name: "AWS", icon: <FaAws /> },
+  { name: "GCP", icon: <FaGoogle /> },
+  { name: "SpringBoot", icon: <SiSpringboot /> },
 ];
 
 const Skills = () => {
