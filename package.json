@@ -2,7 +2,7 @@
   "name": "tech-portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/bhanuprakashpeddi-1432/tech-portfolio",
+  "homepage": "https://bhanuprakashpeddi-1432.github.io/tech-portfolio",
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
