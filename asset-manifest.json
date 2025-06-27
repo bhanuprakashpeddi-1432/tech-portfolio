@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/bhanuprakashpeddi-1432/tech-portfolio/static/css/main.e059d7cb.css",
+    "main.js": "/bhanuprakashpeddi-1432/tech-portfolio/static/js/main.fb8a119c.js",
+    "static/media/myimg.png": "/bhanuprakashpeddi-1432/tech-portfolio/static/media/myimg.ce853d5ca2fbe0e2b7b3.png",
+    "index.html": "/bhanuprakashpeddi-1432/tech-portfolio/index.html",
+    "main.e059d7cb.css.map": "/bhanuprakashpeddi-1432/tech-portfolio/static/css/main.e059d7cb.css.map",
+    "main.fb8a119c.js.map": "/bhanuprakashpeddi-1432/tech-portfolio/static/js/main.fb8a119c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e059d7cb.css",
+    "static/js/main.fb8a119c.js"
+  ]
+}
