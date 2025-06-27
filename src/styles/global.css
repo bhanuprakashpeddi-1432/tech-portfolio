@@ -1,0 +1,8 @@
+/* src/styles/global.css */
+:root {
+  --primary: #00f0ff;  /* Electric Cyan */
+  --secondary: #ff00ff; /* Neon Pink */
+  --dark: #0a0a1a;     /* Deep Navy */
+  --light: #e0e0ff;    /* Soft Glow */
+  --accent: #ffcc00;   /* Cyber Yellow */
+}
