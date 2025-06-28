@@ -6,7 +6,7 @@ import Projects from "./components/Projects";
 
 function App() {
   return (
-    <Router basename="/tech-portfolio">
+    <Router>
       <AnimatePresence mode="wait">
         <Routes>
           <Route path="/" element={
