@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/tech-portfolio/static/css/main.e059d7cb.css",
-    "main.js": "/tech-portfolio/static/js/main.8a15a4d5.js",
-    "static/media/myimg.png": "/tech-portfolio/static/media/myimg.ce853d5ca2fbe0e2b7b3.png",
-    "index.html": "/tech-portfolio/index.html",
-    "main.e059d7cb.css.map": "/tech-portfolio/static/css/main.e059d7cb.css.map",
-    "main.8a15a4d5.js.map": "/tech-portfolio/static/js/main.8a15a4d5.js.map"
+    "main.css": "/static/css/main.e059d7cb.css",
+    "main.js": "/static/js/main.28fdff9d.js",
+    "static/media/myimg.png": "/static/media/myimg.ce853d5ca2fbe0e2b7b3.png",
+    "index.html": "/index.html",
+    "main.e059d7cb.css.map": "/static/css/main.e059d7cb.css.map",
+    "main.28fdff9d.js.map": "/static/js/main.28fdff9d.js.map"
   },
   "entrypoints": [
     "static/css/main.e059d7cb.css",
-    "static/js/main.8a15a4d5.js"
+    "static/js/main.28fdff9d.js"
   ]
 }
