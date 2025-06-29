@@ -54,16 +54,16 @@ const Home = () => {
       className="home-container"
     >
       {/* Animated background elements */}
-      {[...Array(8)].map((_, i) => (
+      {[...Array(6)].map((_, i) => (
         <div
           key={i}
           ref={el => circlesRef.current[i] = el}
           className="tech-circle"
           style={{
-            '--size': `${50 + i * 10}px`,
-            '--blur': `${5 + i}px`,
-            '--opacity': `${0.1 + i * 0.03}`,
-            '--delay': `${i * 0.2}s`,
+            '--size': `${40 + i * 8}px`,
+            '--blur': `${3 + i}px`,
+            '--opacity': `${0.05 + i * 0.02}`,
+            '--delay': `${i * 0.5}s`,
             '--color': i % 2 ? 'rgba(0, 240, 255, var(--opacity))' : 'rgba(255, 0, 255, var(--opacity))'
           }}
         />

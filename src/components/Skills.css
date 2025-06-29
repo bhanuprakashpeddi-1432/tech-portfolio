@@ -50,7 +50,7 @@
   border-radius: 15px;
   text-align: center;
   border: 1px solid rgba(0, 240, 255, 0.2);
-  transition: all 0.3s ease;
+  transition: all 0.1s ease;
   position: relative;
   overflow: hidden;
 }
@@ -68,7 +68,7 @@
     var(--accent));
   z-index: -1;
   opacity: 0;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.1s ease;
 }
 
 .skill-card:hover::before {
@@ -78,7 +78,7 @@
 .skill-icon {
   margin-bottom: 1.5rem;
   font-size: 2.5rem;
-  transition: transform 0.3s ease;
+  transition: transform 0.1s ease;
 }
 
 .skill-card:hover .skill-icon {
@@ -125,7 +125,7 @@
   right: 0;
   bottom: 0;
   background: rgba(255, 255, 255, 0.2);
-  animation: shimmer 2s infinite;
+  animation: shimmer 0.1s infinite;
 }
 
 @keyframes shimmer {

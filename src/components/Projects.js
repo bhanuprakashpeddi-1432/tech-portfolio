@@ -18,8 +18,8 @@ const projects = [
     liveDemo: ""
   },
   {
-    title: "Inventory Management System",
-    description: "The Most Optimized and smart Inventory Management Dashboard",
+    title: "Smart Inventory Management System",
+    description: "The Most Optimized and Smart Inventory Management Dashboard",
     tags: ["React", "Shadcn/ui"],
     github: "https://github.com/bhanuprakashpeddi-1432/Inventory_Management",
     liveDemo: ""
