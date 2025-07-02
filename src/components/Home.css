@@ -33,34 +33,36 @@
 
 .image-container {
   position: relative;
-  width: 100%;
-  max-width: 300px;
-  height: auto;
+  width: 350px;
+  height: 350px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 20px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
 .full-image {
   width: 100%;
   height: auto;
-  object-fit: cover;
+  object-fit: contain;
   object-position: center;
-  border-radius: 20px;
+  border-radius: 15px;
   filter: contrast(120%) brightness(100%);
+  z-index: 2;
+  position: relative;
 }
 
 .circle-overlay {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 300px;
   border-radius: 50%;
-  background: rgba(0, 240, 255, 0.2);
+  background: rgba(0, 240, 255, 0.1);
   mix-blend-mode: overlay;
+  z-index: 1;
 }
 
 /* Animated background circle effects - Light and subtle */
@@ -132,6 +134,171 @@
   filter: drop-shadow(0 0 10px #00f0ff);
 }
 
+/* Action buttons */
+.action-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #00f0ff, #0099cc);
+  color: #ffffff;
+  box-shadow: 0 4px 15px rgba(0, 240, 255, 0.3);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #00ccdd, #007799);
+  box-shadow: 0 6px 20px rgba(0, 240, 255, 0.4);
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background: linear-gradient(135deg, #ff6b6b, #ee5a52);
+  color: #ffffff;
+  box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+}
+
+.btn-secondary:hover {
+  background: linear-gradient(135deg, #ee5a52, #dd4b42);
+  box-shadow: 0 6px 20px rgba(255, 107, 107, 0.4);
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  background: transparent;
+  color: #00f0ff;
+  border: 2px solid #00f0ff;
+  box-shadow: 0 4px 15px rgba(0, 240, 255, 0.2);
+}
+
+.btn-outline:hover {
+  background: #00f0ff;
+  color: #0a0a1a;
+  box-shadow: 0 6px 20px rgba(0, 240, 255, 0.4);
+  transform: translateY(-2px);
+}
+
+/* Connect popup */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+}
+
+.connect-popup {
+  background: linear-gradient(135deg, #1a1a2a, #2a2a3a);
+  border-radius: 20px;
+  padding: 2rem;
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+  position: relative;
+  border: 1px solid rgba(0, 240, 255, 0.3);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.close-btn:hover {
+  color: #00f0ff;
+}
+
+.connect-popup h3 {
+  color: #ffffff;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.connect-popup p {
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 2rem;
+}
+
+.social-links {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.social-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  border-radius: 15px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.social-link:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.social-link.linkedin {
+  color: #0077b5;
+}
+
+.social-link.linkedin:hover {
+  box-shadow: 0 10px 30px rgba(0, 119, 181, 0.3);
+}
+
+.social-link.github {
+  color: #ffffff;
+}
+
+.social-link.github:hover {
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.3);
+  color: #f0f0f0;
+}
+
+.social-link svg {
+  transition: transform 0.3s ease;
+}
+
+.social-link:hover svg {
+  transform: scale(1.1);
+}
+
 /* Responsive adjustments */
 @media (max-width: 992px) {
   .content-wrapper {
@@ -161,5 +328,23 @@
   
   .hero-subtitle {
     font-size: 1.2rem;
+  }
+  
+  .action-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .btn {
+    width: 100%;
+    max-width: 250px;
+  }
+  
+  .social-links {
+    gap: 1rem;
+  }
+  
+  .connect-popup {
+    padding: 1.5rem;
   }
 }
