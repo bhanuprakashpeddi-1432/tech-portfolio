@@ -304,11 +304,13 @@
   .content-wrapper {
     grid-template-columns: 1fr;
     gap: 2rem;
+    text-align: center;
   }
   
   .image-container {
-    min-height: 300px;
     order: -1;
+    margin: 0 auto;
+    justify-self: center;
   }
   
   .text-content {
@@ -317,27 +319,43 @@
 }
 
 @media (max-width: 768px) {
+  .content-wrapper {
+    padding: 1rem;
+    gap: 1.5rem;
+  }
+  
+  .image-container {
+    width: 280px;
+    height: 280px;
+    margin: 0 auto;
+  }
+  
   .circle-overlay {
-    width: 80%;
-    height: 80%;
+    width: 250px;
+    height: 250px;
   }
   
   .hero-title {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
+    margin-bottom: 0.8rem;
   }
   
   .hero-subtitle {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
   }
   
   .action-buttons {
     flex-direction: column;
     align-items: center;
+    gap: 0.8rem;
+    margin-top: 1.5rem;
   }
   
   .btn {
     width: 100%;
     max-width: 250px;
+    padding: 0.7rem 1.5rem;
   }
   
   .social-links {
@@ -346,5 +364,6 @@
   
   .connect-popup {
     padding: 1.5rem;
+    margin: 1rem;
   }
 }
