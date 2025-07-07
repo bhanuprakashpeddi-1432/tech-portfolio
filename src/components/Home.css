@@ -196,6 +196,18 @@
   transform: translateY(-2px);
 }
 
+.btn-resume {
+  background: linear-gradient(135deg, #6c5ce7, #a29bfe);
+  color: #ffffff;
+  box-shadow: 0 4px 15px rgba(108, 92, 231, 0.3);
+}
+
+.btn-resume:hover {
+  background: linear-gradient(135deg, #5f4fcf, #8b7ee8);
+  box-shadow: 0 6px 20px rgba(108, 92, 231, 0.4);
+  transform: translateY(-2px);
+}
+
 /* Connect popup */
 .popup-overlay {
   position: fixed;

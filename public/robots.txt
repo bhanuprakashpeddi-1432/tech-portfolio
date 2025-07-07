@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Sitemap: https://bhanuprakashpeddi.tech/sitemap.xml
+
+# Disallow crawling of build files
+Disallow: /static/
+Disallow: /*.js$
+Disallow: /*.css$
+Disallow: /*.map$

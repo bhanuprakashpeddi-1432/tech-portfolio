@@ -1,0 +1,67 @@
+# Bhanu Prakash Peddi - Resume
+
+## Contact Information
+- **Email:** bhanuprakashpeddi5@gmail.com
+- **Phone:** +91 9121086544
+- **Location:** Vijayawada, India
+- **LinkedIn:** https://linkedin.com/in/bhanu-prakash-peddi
+- **GitHub:** https://github.com/bhanuprakashpeddi-1432
+- **Portfolio:** https://bhanuprakashpeddi.tech
+
+## Professional Summary
+Full Stack Developer with expertise in modern web technologies including React.js, Node.js, and cloud platforms. Passionate about building scalable applications and solving complex problems with innovative solutions.
+
+## Technical Skills
+- **Frontend:** React.js, JavaScript (ES6+), HTML5, CSS3, Framer Motion
+- **Backend:** Node.js, Express.js, RESTful APIs
+- **Databases:** MongoDB, PostgreSQL, MySQL
+- **Programming Languages:** JavaScript, Java, Python, C/C++
+- **Cloud Platforms:** AWS, Google Cloud Platform (GCP)
+- **Tools & Technologies:** Git, Docker, Postman, VS Code
+- **UI/UX:** Responsive Design, Material-UI, Tailwind CSS
+
+## Projects
+
+### Grievance Management System
+**Technologies:** React, Node.js, MongoDB, Express.js
+- Built a comprehensive MERN stack application for managing grievances
+- Implemented user authentication, real-time notifications, and admin dashboard
+- Features include complaint submission, status tracking, and email notifications
+- **GitHub:** https://github.com/bhanuprakashpeddi-1432/grievance-management-system
+
+### Smart Inventory Management System
+**Technologies:** React, Shadcn/ui, TypeScript, Chart.js
+- Developed an intelligent inventory dashboard with real-time tracking
+- Implemented analytics charts, automated alerts, and reporting features
+- Optimized for performance with modern UI components
+- **GitHub:** https://github.com/bhanuprakashpeddi-1432/Inventory_Management
+
+### Portfolio Website
+**Technologies:** React, Framer Motion, AnimeJS
+- Created a modern, responsive portfolio with smooth animations
+- Implemented SEO optimization, PWA features, and accessibility compliance
+- Features include contact form, project showcase, and mobile optimization
+- **GitHub:** https://github.com/bhanuprakashpeddi-1432/portfolio
+- **Live:** https://bhanuprakashpeddi.tech
+
+## Education
+**Bachelor's in Computer Science**
+- Focus on Software Development and Data Structures
+- Relevant coursework: Algorithms, Database Management, Web Development
+
+## Experience & Achievements
+- Developed multiple full-stack web applications using modern technologies
+- Experience with cloud deployment and DevOps practices
+- Strong problem-solving skills and attention to detail
+- Collaborative team player with excellent communication skills
+
+## Certifications & Learning
+- Continuous learning in modern web development frameworks
+- Experience with Agile development methodologies
+- Knowledge of software design patterns and best practices
+
+---
+
+**Note:** This is a text version of the resume. For the complete formatted version, please download the PDF from the website.
+
+Last Updated: January 2025

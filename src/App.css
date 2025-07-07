@@ -1,0 +1,100 @@
+/* Global App Styles */
+.app {
+  position: relative;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* Smooth scrolling for the entire app */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Global focus styles for accessibility */
+*:focus {
+  outline: 2px solid #00f0ff;
+  outline-offset: 2px;
+}
+
+/* Skip to main content for screen readers */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 6px;
+  background: #00f0ff;
+  color: #0a0a1a;
+  padding: 8px;
+  text-decoration: none;
+  z-index: 10000;
+  border-radius: 4px;
+}
+
+.skip-link:focus {
+  top: 6px;
+}
+
+/* Ensure main content doesn't get hidden behind fixed nav */
+main {
+  padding-top: 80px; /* Adjust based on nav height */
+}
+
+/* Loading screen transition */
+.page-transition-enter {
+  opacity: 0;
+}
+
+.page-transition-enter-active {
+  opacity: 1;
+  transition: opacity 300ms;
+}
+
+.page-transition-exit {
+  opacity: 1;
+}
+
+.page-transition-exit-active {
+  opacity: 0;
+  transition: opacity 300ms;
+}
+
+/* Print styles */
+@media print {
+  .navigation,
+  .scroll-down-arrow,
+  .action-buttons {
+    display: none !important;
+  }
+  
+  body {
+    background: white !important;
+    color: black !important;
+  }
+  
+  .about-container,
+  .contact-container,
+  .projects-container,
+  .skills-container {
+    background: white !important;
+    color: black !important;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  :root {
+    --primary: #00ffff;
+    --secondary: #ff00ff;
+    --light: #ffffff;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

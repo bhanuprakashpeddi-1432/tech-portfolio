@@ -9,6 +9,7 @@ const About = () => {
 
   useEffect(() => {
     // Animate text on scroll
+
     anime({
       targets: textRef.current,
       opacity: [0, 1],
@@ -40,6 +41,11 @@ const About = () => {
       title: "Passion",
       content: "Building scalable applications and exploring new technologies to solve real-world problems",
       icon: "🚀"
+    },
+    {
+      title: "Tech Stack",
+      content: "React, JavaScript, Node.js, Python, MongoDB, PostgreSQL, Git, AWS, and modern web technologies",
+      icon: "💻"
     }
   ];
 

@@ -2,21 +2,13 @@ import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import anime from "animejs";
 import "./Home.css";
-import profileImage from "../styles/myimg2.png"; // Update with your image path
+import profileImage from "../styles/img.png"; // Update with your image path
 
 const Home = () => {
   const textRef = useRef(null);
   const circlesRef = useRef([]);
   const arrowRef = useRef(null);
   const [showConnectPopup, setShowConnectPopup] = useState(false);
-
-  // Navigation functions
-  const scrollToSection = (sectionId) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
 
   const handleConnectClick = () => {
     setShowConnectPopup(true);
@@ -84,6 +76,7 @@ const Home = () => {
 
   return (
     <motion.div
+      id="home"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
@@ -136,24 +129,6 @@ const Home = () => {
             transition={{ delay: 1.5, duration: 0.8 }}
           >
             <motion.button
-              className="btn btn-primary"
-              onClick={() => scrollToSection('about')}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              About Me
-            </motion.button>
-            
-            <motion.button
-              className="btn btn-secondary"
-              onClick={() => scrollToSection('projects')}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              View My Work
-            </motion.button>
-            
-            <motion.button
               className="btn btn-outline"
               onClick={handleConnectClick}
               whileHover={{ scale: 1.05 }}
@@ -173,10 +148,10 @@ const Home = () => {
         >
           <img 
             src={profileImage} 
-            alt="Bhanu Prakash Peddi" 
+            alt="Bhanu Prakash Peddi - Full Stack Developer" 
             className="full-image"
           />
-          <div className="circle-overlay" />
+          <div className="circle-overlay" aria-hidden="true" />
         </motion.div>
       </div>
 

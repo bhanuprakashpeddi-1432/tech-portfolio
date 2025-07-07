@@ -4,25 +4,31 @@ import "./Projects.css";
 
 const projects = [
   {
-    title: "Grieviance System",
-    description: "Built with MERN Stack",
-    tags: ["React", "Nodejs", "MongoDB"],
+    title: "Grievance Management System",
+    description: "A comprehensive MERN stack application for managing and tracking grievances with real-time notifications, user authentication, and admin dashboard for efficient complaint resolution.",
+    detailedDescription: "Built with React.js frontend, Node.js/Express backend, and MongoDB database. Features include user registration, complaint submission, status tracking, admin panel, and email notifications.",
+    tags: ["React", "Node.js", "MongoDB", "Express", "JWT", "Material-UI"],
     github: "https://github.com/bhanuprakashpeddi-1432/grievance-management-system",
-    liveDemo: ""
+    liveDemo: "https://grievance-system-demo.netlify.app",
+    features: ["User Authentication", "Real-time Notifications", "Admin Dashboard", "Status Tracking"]
   },
   {
     title: "Portfolio Website",
-    description: "Animated with Framer Motion",
-    tags: ["React", "Framer Motion", "AnimeJS"],
+    description: "A modern, responsive portfolio website built with React and enhanced with smooth animations using Framer Motion and AnimeJS for an engaging user experience.",
+    detailedDescription: "Personal portfolio showcasing projects, skills, and experience with modern design principles, responsive layout, and smooth animations.",
+    tags: ["React", "Framer Motion", "AnimeJS", "CSS3", "Responsive Design"],
     github: "https://github.com/bhanuprakashpeddi-1432/portfolio",
-    liveDemo: ""
+    liveDemo: "https://bhanuprakashpeddi.tech",
+    features: ["Responsive Design", "Smooth Animations", "Modern UI", "Performance Optimized"]
   },
   {
     title: "Smart Inventory Management System",
-    description: "The Most Optimized and Smart Inventory Management Dashboard",
-    tags: ["React", "Shadcn/ui"],
+    description: "An intelligent inventory management dashboard with advanced analytics, real-time stock tracking, and automated alerts for efficient warehouse management.",
+    detailedDescription: "React-based dashboard with Shadcn/ui components, featuring inventory tracking, analytics charts, automated reorder alerts, and comprehensive reporting.",
+    tags: ["React", "Shadcn/ui", "Chart.js", "TypeScript", "Tailwind CSS"],
     github: "https://github.com/bhanuprakashpeddi-1432/Inventory_Management",
-    liveDemo: ""
+    liveDemo: "https://smart-inventory-demo.netlify.app",
+    features: ["Real-time Tracking", "Analytics Dashboard", "Automated Alerts", "Report Generation"]
   },
 ];
 
@@ -72,6 +78,7 @@ const Projects = () => {
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="project-button"
+                aria-label={`View ${project.title} source code on GitHub`}
               >
                 <FaGithub /> Code
               </a>
@@ -81,6 +88,7 @@ const Projects = () => {
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="project-button"
+                  aria-label={`View ${project.title} live demo`}
                 >
                   <FaExternalLinkAlt /> Live Demo
                 </a>
