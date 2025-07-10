@@ -1,9 +1,11 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { motion } from "framer-motion";
 import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaLinkedin, FaGithub } from "react-icons/fa";
+import emailjs from '@emailjs/browser';
 import "./Contact.css";
 
 const Contact = () => {
+  const form = useRef();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -13,27 +15,52 @@ const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState('');
 
-  const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
+  // EmailJS configuration - Replace with your actual keys from https://emailjs.com
+  const EMAILJS_SERVICE_ID = 'service_rsmcrh6'; // Replace with your service ID from EmailJS
+  const EMAILJS_TEMPLATE_ID = 'template_6ncz4fr'; // Replace with your template ID from EmailJS
+  const EMAILJS_PUBLIC_KEY = '2ZF_fH7yO9nJqn7jC'; // Replace with your public key from EmailJS
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false);
+    setSubmitStatus('');
+
+    try {
+      // Send email using EmailJS
+      const result = await emailjs.sendForm(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        form.current,
+        EMAILJS_PUBLIC_KEY
+      );
+
+      console.log('Email sent successfully:', result.text);
       setSubmitStatus('success');
-      setFormData({ name: '', email: '', subject: '', message: '' });
       
+      // Clear form data
+      setFormData({
+        name: '',
+        email: '',
+        subject: '',
+        message: ''
+      });
+
+      // Hide success message after 5 seconds
       setTimeout(() => {
         setSubmitStatus('');
-      }, 3000);
-    }, 2000);
+      }, 5000);
+
+    } catch (error) {
+      console.error('Email sending failed:', error);
+      setSubmitStatus('error');
+      
+      // Hide error message after 5 seconds
+      setTimeout(() => {
+        setSubmitStatus('');
+      }, 5000);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleResumeDownload = () => {
@@ -191,14 +218,14 @@ const Contact = () => {
             animate={{ x: 0, opacity: 1 }}
             transition={{ delay: 0.5, duration: 0.8 }}
           >
-            <form className="contact-form" onSubmit={handleSubmit}>
+            <form ref={form} className="contact-form" onSubmit={handleSubmit}>
               <div className="form-group">
                 <input
                   type="text"
-                  name="name"
+                  name="from_name"
                   placeholder="Your Name"
                   value={formData.name}
-                  onChange={handleChange}
+                  onChange={(e) => setFormData({...formData, name: e.target.value})}
                   required
                   className="form-input"
                 />
@@ -207,10 +234,10 @@ const Contact = () => {
               <div className="form-group">
                 <input
                   type="email"
-                  name="email"
+                  name="from_email"
                   placeholder="Your Email"
                   value={formData.email}
-                  onChange={handleChange}
+                  onChange={(e) => setFormData({...formData, email: e.target.value})}
                   required
                   className="form-input"
                 />
@@ -222,7 +249,7 @@ const Contact = () => {
                   name="subject"
                   placeholder="Subject"
                   value={formData.subject}
-                  onChange={handleChange}
+                  onChange={(e) => setFormData({...formData, subject: e.target.value})}
                   required
                   className="form-input"
                 />
@@ -233,7 +260,7 @@ const Contact = () => {
                   name="message"
                   placeholder="Your Message"
                   value={formData.message}
-                  onChange={handleChange}
+                  onChange={(e) => setFormData({...formData, message: e.target.value})}
                   required
                   rows="6"
                   className="form-textarea"
@@ -256,7 +283,17 @@ const Contact = () => {
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                 >
-                  Thank you! Your message has been sent successfully.
+                  ✅ Thank you! Your message has been sent successfully.
+                </motion.div>
+              )}
+
+              {submitStatus === 'error' && (
+                <motion.div
+                  className="error-message"
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                >
+                  ❌ Sorry, there was an error sending your message. Please try again.
                 </motion.div>
               )}
             </form>

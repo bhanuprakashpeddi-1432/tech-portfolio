@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "https://bhanuprakashpeddi.tech/",
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "animejs": "^3.2.1",
     "framer-motion": "^12.19.1",
     "react": "^19.1.0",
