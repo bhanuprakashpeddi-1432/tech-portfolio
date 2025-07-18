@@ -27,9 +27,18 @@ const projects = [
     detailedDescription: "React-based dashboard with Shadcn/ui components, featuring inventory tracking, analytics charts, automated reorder alerts, and comprehensive reporting.",
     tags: ["React", "Shadcn/ui", "Chart.js", "TypeScript", "Tailwind CSS"],
     github: "https://github.com/bhanuprakashpeddi-1432/Inventory_Management",
-    liveDemo: "https://smart-inventory-demo.netlify.app",
+    liveDemo: "Not specified in README",
     features: ["Real-time Tracking", "Analytics Dashboard", "Automated Alerts", "Report Generation"]
   },
+  {
+    title: "Online Course Management System",
+    description: "A comprehensive full-stack learning management system with role-based access control, course creation, and progress tracking for educational institutions.",
+    detailedDescription: "Spring Boot and React-based LMS featuring JWT authentication, course enrollment system, lesson completion tracking, admin dashboard, and comprehensive user management with real-time progress analytics.",
+    tags: ["Spring Boot", "React", "MySQL", "JWT", "Bootstrap", "JPA/Hibernate", "REST API"],
+    github: "https://github.com/bhanuprakashpeddi-1432/OnlineCourseManagement_System",
+    liveDemo: "Not specified in README",
+    features: ["Role-based Access Control", "Course Management", "Progress Tracking", "Admin Dashboard"]
+  }
 ];
 
 const Projects = () => {

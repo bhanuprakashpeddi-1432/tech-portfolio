@@ -25,6 +25,8 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2.5rem;
+  align-items: start;
+  grid-auto-rows: auto;
 }
 
 .project-card {
@@ -37,7 +39,8 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  height: 100%;
+  height: 450px;
+  box-sizing: border-box;
 }
 
 .project-card::before {
@@ -71,6 +74,12 @@
   opacity: 0.8;
   margin-bottom: 1.5rem;
   flex-grow: 1;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  line-clamp: 4;
+  -webkit-box-orient: vertical;
+  line-height: 1.5;
 }
 
 .tags {
@@ -154,7 +163,7 @@
   .project-card {
     padding: 2rem;
     margin-bottom: 2rem;
-    min-height: auto;
+    height: 420px;
     box-sizing: border-box;
   }
   
@@ -210,6 +219,7 @@
   .project-card {
     padding: 1.8rem;
     margin-bottom: 1.5rem;
+    height: 400px;
   }
 }
 
