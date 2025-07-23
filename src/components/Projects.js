@@ -9,7 +9,7 @@ const projects = [
     detailedDescription: "Built with React.js frontend, Node.js/Express backend, and MongoDB database. Features include user registration, complaint submission, status tracking, admin panel, and email notifications.",
     tags: ["React", "Node.js", "MongoDB", "Express", "JWT", "Material-UI"],
     github: "https://github.com/bhanuprakashpeddi-1432/grievance-management-system",
-    liveDemo: "https://grievance-system-demo.netlify.app",
+    liveDemo: "",
     features: ["User Authentication", "Real-time Notifications", "Admin Dashboard", "Status Tracking"]
   },
   {
@@ -27,7 +27,7 @@ const projects = [
     detailedDescription: "React-based dashboard with Shadcn/ui components, featuring inventory tracking, analytics charts, automated reorder alerts, and comprehensive reporting.",
     tags: ["React", "Shadcn/ui", "Chart.js", "TypeScript", "Tailwind CSS"],
     github: "https://github.com/bhanuprakashpeddi-1432/Inventory_Management",
-    liveDemo: "Not specified in README",
+    liveDemo: "",
     features: ["Real-time Tracking", "Analytics Dashboard", "Automated Alerts", "Report Generation"]
   },
   {
@@ -36,7 +36,7 @@ const projects = [
     detailedDescription: "Spring Boot and React-based LMS featuring JWT authentication, course enrollment system, lesson completion tracking, admin dashboard, and comprehensive user management with real-time progress analytics.",
     tags: ["Spring Boot", "React", "MySQL", "JWT", "Bootstrap", "JPA/Hibernate", "REST API"],
     github: "https://github.com/bhanuprakashpeddi-1432/OnlineCourseManagement_System",
-    liveDemo: "Not specified in README",
+    liveDemo: "",
     features: ["Role-based Access Control", "Course Management", "Progress Tracking", "Admin Dashboard"]
   }
 ];
