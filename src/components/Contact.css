@@ -4,7 +4,7 @@
   width: 100%;
   min-height: 100vh;
   padding: 5rem 0;
-  padding-top: 8rem; /* Account for fixed navigation */
+  padding-top: 2rem; /* Account for fixed navigation */
   background: linear-gradient(135deg, #0a0a1a, #1a1a2a);
   overflow: hidden;
   display: flex;

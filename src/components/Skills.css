@@ -18,7 +18,7 @@
 
 .skills-container {
   padding: 5rem 2rem;
-  padding-top: 8rem; /* Account for fixed navigation */
+  padding-top: 5rem; /* Account for fixed navigation */
   background: rgba(10, 10, 26, 0.8);
   backdrop-filter: blur(10px);
   border-top: 1px solid rgba(0, 240, 255, 0.1);

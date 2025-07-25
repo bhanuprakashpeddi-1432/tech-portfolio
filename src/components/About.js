@@ -57,21 +57,6 @@ const About = () => {
       transition={{ duration: 0.8 }}
       className="about-container"
     >
-      {/* Animated background elements */}
-      {[...Array(6)].map((_, i) => (
-        <div
-          key={i}
-          className="about-circle"
-          style={{
-            '--size': `${30 + i * 8}px`,
-            '--opacity': `${0.05 + i * 0.02}`,
-            '--delay': `${i * 0.3}s`,
-            '--color': i % 3 === 0 ? 'rgba(0, 240, 255, var(--opacity))' : 
-                      i % 3 === 1 ? 'rgba(255, 0, 255, var(--opacity))' : 
-                      'rgba(0, 255, 150, var(--opacity))'
-          }}
-        />
-      ))}
 
       <div className="about-content">
         <motion.div
