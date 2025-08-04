@@ -38,6 +38,15 @@ const projects = [
     github: "https://github.com/bhanuprakashpeddi-1432/OnlineCourseManagement_System",
     liveDemo: "",
     features: ["Role-based Access Control", "Course Management", "Progress Tracking", "Admin Dashboard"]
+  },
+  {
+    title: "SaaS Landing Page Frontend",
+    description: "A sleek and modern SaaS landing page frontend built with React and Next.js, featuring a hero section, feature highlights, testimonials, and a call-to-action, all designed with user experience in mind.",
+    detailedDescription: "This project showcases a responsive landing page for a SaaS product, built with React and Next.js, utilizing Framer Motion for smooth animations and transitions. It includes sections for features, testimonials, and a contact form.",
+    tags: [ "React", "Next.js", "Framer Motion", "CSS3", "Responsive Design"],
+    github: "https://github.com/bhanuprakashpeddi-1432/SaaS_landing_page",
+    liveDemo: "https://saa-s-landing-page-tan.vercel.app/",
+    features: ["Responsive Design", "Smooth Animations", "Feature Highlights", "User Testimonials"]
   }
 ];
 
