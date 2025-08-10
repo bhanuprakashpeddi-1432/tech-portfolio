@@ -1,0 +1,123 @@
+/* Section Separator Styles */
+.section-separator {
+  width: 100%;
+  padding: 40px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.separator-line {
+  width: 100%;
+  max-width: 800px;
+  height: 2px;
+  position: relative;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(0, 240, 255, 0.3) 20%,
+    rgba(0, 240, 255, 0.8) 50%,
+    rgba(0, 240, 255, 0.3) 80%,
+    transparent 100%
+  );
+  border-radius: 1px;
+  overflow: hidden;
+}
+
+.separator-glow {
+  position: absolute;
+  top: -1px;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(0, 240, 255, 0.1) 20%,
+    rgba(0, 240, 255, 0.4) 50%,
+    rgba(0, 240, 255, 0.1) 80%,
+    transparent 100%
+  );
+  filter: blur(2px);
+  animation: pulse 3s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+/* Variant styles */
+.section-separator.accent .separator-line {
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 204, 0, 0.3) 20%,
+    rgba(255, 204, 0, 0.8) 50%,
+    rgba(255, 204, 0, 0.3) 80%,
+    transparent 100%
+  );
+}
+
+.section-separator.accent .separator-glow {
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 204, 0, 0.1) 20%,
+    rgba(255, 204, 0, 0.4) 50%,
+    rgba(255, 204, 0, 0.1) 80%,
+    transparent 100%
+  );
+}
+
+.section-separator.secondary .separator-line {
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 0, 255, 0.3) 20%,
+    rgba(255, 0, 255, 0.8) 50%,
+    rgba(255, 0, 255, 0.3) 80%,
+    transparent 100%
+  );
+}
+
+.section-separator.secondary .separator-glow {
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 0, 255, 0.1) 20%,
+    rgba(255, 0, 255, 0.4) 50%,
+    rgba(255, 0, 255, 0.1) 80%,
+    transparent 100%
+  );
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .section-separator {
+    padding: 30px 0;
+  }
+  
+  .separator-line {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-separator {
+    padding: 20px 0;
+  }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .separator-glow {
+    animation: none;
+    opacity: 0.7;
+  }
+}

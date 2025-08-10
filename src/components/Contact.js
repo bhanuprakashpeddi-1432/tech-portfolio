@@ -1,6 +1,6 @@
 import { useState, useRef } from "react";
 import { motion } from "framer-motion";
-import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaLinkedin, FaGithub } from "react-icons/fa";
+import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaLinkedin, FaGithub, FaComments } from "react-icons/fa";
 import emailjs from '@emailjs/browser';
 import "./Contact.css";
 
@@ -138,7 +138,8 @@ const Contact = () => {
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.3, duration: 0.8 }}
         >
-          <h2 className="contact-title">Get In <span>Touch</span></h2>
+          <FaComments className="section-icon" />
+          <h2 className="contact-title">Get In Touch</h2>
           <p className="contact-description">
             Have a project in mind or want to collaborate? I'd love to hear from you!
             Let's create something amazing together.

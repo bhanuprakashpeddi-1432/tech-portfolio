@@ -10,6 +10,16 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Enhanced scroll behavior */
+* {
+  scroll-behavior: smooth;
+}
+
+/* Scroll padding to account for fixed navigation */
+html {
+  scroll-padding-top: 100px;
+}
+
 /* Global focus styles for accessibility */
 *:focus {
   outline: 2px solid #00f0ff;
@@ -35,7 +45,7 @@ html {
 
 /* Ensure main content doesn't get hidden behind fixed nav */
 main {
-  padding-top: 80px; /* Adjust based on nav height */
+  padding-top: 70px; /* Adjust based on nav height */
 }
 
 /* Loading screen transition */

@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { useEffect, useRef } from "react";
+import { FaUser } from "react-icons/fa";
 import anime from "animejs";
 import "./About.css";
 
@@ -66,7 +67,10 @@ const About = () => {
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.3, duration: 0.8 }}
         >
-          <h2 className="about-title">About <span>Me</span></h2>
+          <div className="header-title-row">
+            <FaUser className="section-icon" />
+            <h2 className="about-title">About Me</h2>
+          </div>
           <p className="about-description">
             I am a passionate full-stack developer with expertise in building dynamic,
             responsive, and scalable web applications. I love turning complex problems

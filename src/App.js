@@ -10,6 +10,12 @@ import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import NotFound from "./components/NotFound";
+import GitHubContributions from "./components/GitHubContributions";
+import CodingProfiles from "./components/CodingProfiles";
+import Certifications from "./components/Certifications";
+import CurrentLearning from "./components/CurrentLearning";
+import ChatWidget from "./components/ChatWidget";
+import SectionSeparator from "./components/SectionSeparator";
 import "./App.css";
 
 function App() {
@@ -38,15 +44,28 @@ function App() {
               <Route path="/" element={
                 <main>
                   <Home />
-                  <Skills />
-                  <Projects />
+                  <SectionSeparator />
                   <About />
+                  <SectionSeparator variant="accent" />
+                  <Skills />
+                  <SectionSeparator />
+                  <Projects />
+                  <SectionSeparator variant="secondary" />
+                  <GitHubContributions />
+                  <SectionSeparator />
+                  <CodingProfiles />
+                  <SectionSeparator variant="accent" />
+                  <Certifications />
+                  <SectionSeparator />
+                  <CurrentLearning />
+                  <SectionSeparator variant="secondary" />
                   <Contact />
                 </main>
               } />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </AnimatePresence>
+          <ChatWidget />
         </div>
       </Router>
     </ErrorBoundary>

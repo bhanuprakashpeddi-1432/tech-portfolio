@@ -38,9 +38,13 @@ const Navigation = () => {
 
   const navItems = [
     { name: 'Home', id: 'home' },
+    { name: 'About', id: 'about' },
     { name: 'Skills', id: 'skills' },
     { name: 'Projects', id: 'projects' },
-    { name: 'About', id: 'about' },
+    { name: 'GitHub', id: 'github-contributions' },
+    { name: 'Profiles', id: 'coding-profiles' },
+    { name: 'Certifications', id: 'certifications' },
+    { name: 'Learning', id: 'current-learning' },
     { name: 'Contact', id: 'contact' }
   ];
 

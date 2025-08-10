@@ -1,10 +1,11 @@
 import { motion } from "framer-motion";
-import { FaReact, FaNodeJs, FaJs, FaCss3Alt, FaDatabase, FaGitAlt, FaJava, FaAws, FaGoogle, FaCuttlefish } from "react-icons/fa";
-import { SiSpringboot, SiMongodb } from "react-icons/si";
+import { FaReact, FaNodeJs, FaJs, FaCss3Alt, FaDatabase, FaGitAlt, FaJava, FaAws, FaGoogle, FaCuttlefish, FaCogs } from "react-icons/fa";
+import { SiSpringboot, SiMongodb, SiNextdotjs } from "react-icons/si";
 import "./Skills.css";
 
 const skills = [
   { name: "React", icon: <FaReact /> },
+  { name: "Next.js", icon: <SiNextdotjs /> },
   { name: "Node.js", icon: <FaNodeJs /> },
   { name: "JavaScript", icon: <FaJs /> },
   { name: "CSS", icon: <FaCss3Alt /> },
@@ -27,14 +28,17 @@ const Skills = () => {
       transition={{ duration: 0.5 }}
       className="skills-container"
     >
-      <motion.h2 
+      <motion.div 
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.3 }}
-        className="skills-title"
+        className="skills-header"
       >
-        My <span>Skills</span>
-      </motion.h2>
+        <div className="header-title-row">
+          <FaCogs className="section-icon" />
+          <h2 className="skills-title">My Skills</h2>
+        </div>
+      </motion.div>
       
       <div className="skills-grid">
         {skills.map((skill, index) => (
