@@ -153,6 +153,98 @@ Created a cutting-edge portfolio website that showcases my skills and projects t
     github: "https://github.com/bhanuprakashpeddi-1432/SaaS_landing_page",
     liveDemo: "https://saa-s-landing-page-tan.vercel.app/",
     features: ["Responsive Design", "Smooth Animations", "Feature Highlights", "User Testimonials", "Lead Capture", "SEO Optimized"]
+  },
+
+  // New entries added from repository READMEs
+  {
+    title: "WebRTC Real-Time Object Detection",
+    description: "Real-time object detection system that streams video from mobile devices to desktop viewers via WebRTC. Supports both browser-based (WASM) and server-side (Python) inference.",
+    detailedDescription: `
+      🛰️ Project Overview
+      A real-time object detection system that connects mobile camera streams to a desktop viewer using WebRTC, offering two inference modes: WASM (browser inference with ONNX Runtime Web) and Server (Python backend with optional GPU acceleration).
+
+      ✨ Key Features
+      - Real-time Video Streaming via WebRTC P2P
+      - Dual Inference Modes: WASM (browser) and Server (Python)
+      - Mobile-optimized UI with camera controls and QR code pairing
+      - Docker Compose orchestration with profiles for wasm/server
+      - YOLO-based detection (YOLOv4/YOLOv5) and COCO dataset support
+      - Detection configuration: confidence/nms/input size available in detection-engine.js
+      - Performance monitoring (FPS, latency) and adjustable thresholds
+
+      🛠️ Tech & Requirements
+      - Frontend: JavaScript Web App (WebRTC + ONNX Runtime Web)
+      - Server Mode: Python (Flask), ONNX models, optional CUDA/GPU
+      - Deployment: Docker + docker-compose with wasm/server profiles
+      - Models: ONNX YOLOv4 (large) or smaller YOLOv5 options (recommended for WASM)
+
+      ⚙️ Quick Start (summary)
+      - Download models (scripts/download_models.sh)
+      - Run docker compose with desired profile: wasm or server
+      - Desktop viewer: http://localhost:3000 ; Mobile camera: http://[YOUR_IP]:3000/phone
+
+      🔐 Notes
+      - WASM mode keeps video local (privacy friendly) but is limited by browser performance
+      - Server mode enables GPU acceleration and larger models
+    `,
+    tags: ["WebRTC", "ONNX Runtime", "Docker", "WASM", "Python", "YOLO", "Socket.IO", "Docker Compose"],
+    github: "https://github.com/bhanuprakashpeddi-1432/Object_detection_WebRTC",
+    liveDemo: "",
+    features: ["Real-time Video Streaming", "WASM Inference (Browser)", "Server Inference (Python/GPU)", "Docker Compose Profiles", "YOLO Object Detection", "Performance Monitoring", "Mobile Camera Support"]
+  },
+  {
+    title: "Udyam Registration Form Clone",
+    description: "Full-stack clone of the Udyam Registration portal (steps 1–2) with a Python scraper that extracts form schema and a Next.js + TypeScript frontend rendering schema-driven forms with real-time validation.",
+    detailedDescription: `
+      🎓 Project Overview
+      A comprehensive clone of the Udyam Registration first two steps that extracts the original form schema via a Python scraper and renders responsive, schema-driven forms in a Next.js + TypeScript frontend. Backend uses Node/Express + Prisma and PostgreSQL for storage.
+
+      ✨ Key Features
+      - Python web scraper to extract form fields, validation rules, and generate TypeScript/Zod schemas
+      - Responsive frontend built with Next.js, TypeScript, Tailwind CSS and Shadcn/ui
+      - RESTful backend (Node.js + Express) with PostgreSQL (Prisma ORM)
+      - Real-time validation (client + server) using Zod and React Hook Form
+      - Comprehensive testing: Jest for JS, pytest for Python
+      - Dockerized setup and deployment guides
+
+      🛠️ Tech Stack
+      - Frontend: Next.js 14 + TypeScript, Tailwind CSS, Zod + React Hook Form
+      - Backend: Node.js 18+, Express, Prisma, PostgreSQL
+      - Scraper: Python (BeautifulSoup, Requests, Selenium)
+      - CI / Deployment: Docker Compose, recommended cloud providers (Vercel/Railway/Heroku)
+
+      ⚙️ Quick Start (summary)
+      - Run scraper: web-scraper/scraper.py to generate JSON schema and TS types
+      - Backend: npm install, npm run db:setup, npm run dev
+      - Frontend: cd frontend, npm install, npm run dev
+      - Docker: docker-compose up --build
+
+      📚 Notes
+      - The scraper outputs TypeScript interfaces and Zod schemas for the frontend
+      - Tests and docs are included for frontend, backend and scraper modules
+    `,
+    tags: ["Next.js", "TypeScript", "Tailwind CSS", "Prisma", "PostgreSQL", "Express", "Python", "Web Scraping", "Zod", "Docker"],
+    github: "https://github.com/bhanuprakashpeddi-1432/UdhyamRegistration_Clone",
+    liveDemo: "",
+    features: ["Form Schema Scraper", "Schema-driven Forms", "Real-time Validation", "REST API Backend", "TypeScript + Zod Schemas", "Docker Support", "Testing Suite"]
+  },
+  {
+    title: "Expense Tracker",
+    description: "JavaScript-based expense tracking application repository. See repository README for full details and setup instructions.",
+    detailedDescription: `
+      💰 Project Overview
+      Expense Tracker repository built primarily with JavaScript (frontend + backend). The repository contains backend dependencies and likely implements features for logging expenses, categorization and reporting.
+
+      ⚠️ Note
+      A top-level README was not found in the repository root; this entry uses available repository metadata to provide a short summary. For full details, run the project's README or open the repository URL.
+
+      🔗 Where to find more
+      - Repository: https://github.com/bhanuprakashpeddi-1432/Expense-Tracker
+    `,
+    tags: ["JavaScript", "Node.js", "Frontend", "Backend"],
+    github: "https://github.com/bhanuprakashpeddi-1432/Expense-Tracker",
+    liveDemo: "",
+    features: ["Expense Logging", "Categorization", "Reports / Charts (likely)", "Backend API (likely)"]
   }
 ];
 
