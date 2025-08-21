@@ -9,7 +9,7 @@ const certifications = [
     organization: "University of Helsinki",
     date: "2023",
     description: "Comprehensive React.js development course covering hooks, context, and modern patterns",
-    certificateUrl: "#",
+    certificateUrl: "https://studies.cs.helsinki.fi/stats/api/certificate/fullstackopen/en/731246ccd69114e233d3fda619081b00",
     skills: ["React.js", "Hooks", "Context API", "Redux"],
     status: "completed"
   },
@@ -18,18 +18,18 @@ const certifications = [
     organization: "Red Hat",
     date: "2024",
     description: "Certification for application developers using Red Hat technologies",
-    certificateUrl: "#",
+    certificateUrl: "https://www.credly.com/badges/533e7633-190e-43bd-9b55-aa9cac2a35d7/public_url",
     skills: ["Red Hat", "Application Development"],
     status: "completed"
   },
    {
     title: "MongoDB Developer",
     organization: "MongoDB University",
-    date: "In Progress",
+    date: "2025",
     description: "Comprehensive MongoDB development course covering data modeling, aggregation, and performance optimization",
-    certificateUrl: "#",
+    certificateUrl: "https://www.credly.com/badges/1b023772-14a1-4301-992b-848c1c841b5f/linked_in_profile",
     skills: ["MongoDB", "Data Modeling", "Aggregation", "Performance Optimization"],
-    status: "in-progress"
+    status: "completed"
   },
 //   {
 //     title: "JavaScript Algorithms and Data Structures",
