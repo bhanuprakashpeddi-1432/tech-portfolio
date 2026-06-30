@@ -1,109 +1,92 @@
 # 🚀 Bhanu Prakash Peddi - Portfolio Website
 
-[![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen?style=for-the-badge&logo=netlify)](https://bhanuprakashpeddi.tech)
-[![React](https://img.shields.io/badge/React-18+-blue?style=for-the-badge&logo=react)](https://reactjs.org/)
-[![License](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)](LICENSE)
+[![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen?style=for-the-badge&logo=vercel)](https://bhanuprakashpeddi.dev)
+[![React](https://img.shields.io/badge/React-19-blue?style=for-the-badge&logo=react)](https://react.dev/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.0+-blue?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
+[![Vite](https://img.shields.io/badge/Vite-8+-purple?style=for-the-badge&logo=vite)](https://vitejs.dev/)
 
-> A modern, responsive portfolio website built with React.js, featuring smooth animations, interactive UI, and a fully functional contact form. Showcasing my journey as a Full-Stack Developer with a passion for creating innovative web solutions.
+> A modern, responsive portfolio website built with **TanStack Start**, **Vite**, **TypeScript**, and **Tailwind CSS v4**. Featuring smooth animations with Framer Motion, a beautiful UI with shadcn/ui, and showcasing my journey as a Full-Stack Developer and AI/ML Enthusiast.
 
 ## ✨ Live Preview
 
-🌐 **[Visit My Portfolio](http://bhanuprakashpeddi.dev)**
+🌐 **[Visit My Portfolio](https://bhanuprakashpeddi.dev)**
 
 ---
 
 ## 🎯 About This Project
 
-This portfolio represents more than just a collection of my work—it's a reflection of my growth as a developer and my commitment to creating exceptional user experiences. Built from the ground up with modern web technologies, it demonstrates my skills in frontend development, UI/UX design, and attention to detail.
+This portfolio represents a complete architectural evolution from a standard Create React App to a cutting-edge **TanStack Start** application. It's built from the ground up with modern web technologies, demonstrating my skills in frontend development, type-safe routing, UI/UX design, and attention to detail.
 
 ### 🌟 What Makes It Special
 
-- **Pixel-Perfect Design** - Every element is carefully crafted for visual appeal
-- **Smooth Animations** - Powered by Framer Motion for delightful interactions
-- **Fully Responsive** - Looks great on all devices, from mobile to desktop
-- **Accessible** - Built with accessibility best practices in mind
-- **Fast Performance** - Optimized for speed and user experience
-- **Real Contact Form** - Actually sends emails using EmailJS integration
+- **Pixel-Perfect Design** - Carefully crafted using Tailwind CSS v4 and shadcn/ui.
+- **Smooth Animations** - Powered by Framer Motion for delightful interactions.
+- **Type-Safe Routing** - Utilizes TanStack Router for robust, file-based routing.
+- **Fully Responsive** - Looks great on all devices, from mobile to desktop.
+- **Fast Performance** - Optimized via Vite and Nitro server engine.
+- **Resume Download** - Direct integration for easy access to my latest CV.
 
 ---
 
 ## 🛠️ Built With
 
 ### Core Technologies
-- **React 18+** - Modern React with hooks and functional components
-- **JavaScript (ES6+)** - Latest JavaScript features and best practices
-- **CSS3** - Custom styling with modern CSS features
-- **HTML5** - Semantic markup for better accessibility
+- **TanStack Start** - Full-stack React framework
+- **React 19** - Modern React with hooks and Server Components capabilities
+- **TypeScript** - Strongly typed JavaScript
+- **Vite 8** - Next-generation frontend tooling
+- **Tailwind CSS v4** - Utility-first CSS framework
 
 ### Libraries & Tools
+- **shadcn/ui** - Reusable, accessible UI components (built on Radix UI)
 - **Framer Motion** - Smooth animations and transitions
-- **AnimeJS** - Advanced animation effects
-- **React Icons** - Beautiful icon library
-- **EmailJS** - Contact form email functionality
-- **React Router** - Single-page application routing
-
-### Development & Deployment
-- **Create React App** - Project scaffolding and build tools
-- **NPM** - Package management
-- **Git** - Version control
-- **Netlify/Vercel** - Hosting and deployment
+- **Lucide React** - Beautiful icon library
+- **Nitro** - High performance web server engine
 
 ---
 
 ## 🎨 Key Features
 
-### 🏠 **Interactive Homepage**
-- Dynamic typing animation with my name
-- Floating background elements
-- Smooth scroll navigation
-- Professional introduction
+### 🏠 **Interactive Homepage (Hero)**
+- Dynamic typing animation highlighting roles
+- Interactive 3D tilt effect on the profile image
+- Custom glowing orbital animations
+- Quick access buttons (Connect, Projects, Download Resume)
 
 ### 💼 **Projects Showcase**
 - Detailed project cards with descriptions
 - Live demo and GitHub links
-- Technology stack highlights
+- Technology stack tags
 - Responsive grid layout
 
 ### 🛠️ **Skills Section**
-- Interactive skill cards
-- Technology logos and descriptions
-- Organized by categories
-- Hover effects and animations
+- Interactive skill cards categorized by domain (AI/ML, Frontend, Backend, etc.)
+- Progress indicators and hover effects
+
+### 🎓 **Certifications & Learning**
+- Showcases completed credentials (RedHat, MongoDB, etc.)
+- Tracks currently ongoing courses and learning paths
+- Links to coding profiles (LeetCode, HackerRank, CodeChef)
 
 ### 👨‍💻 **About Me**
 - Personal story and background
-- Professional journey
-- Tech stack expertise
-- Career highlights
-
-### 📧 **Contact Form**
-- Fully functional email integration
-- Form validation and error handling
-- Success/error feedback
-- Professional email templates
-
-### 🎯 **Additional Features**
-- Resume download functionality
-- Social media integration
-- SEO optimized
-- PWA capabilities
-- Mobile-first responsive design
+- Professional journey and tech stack expertise
 
 ---
 
 ## 🚀 Getting Started
 
 ### Prerequisites
-- **Node.js** (v14 or higher)
-- **npm** or **yarn**
+- **Node.js** (v20 or higher recommended)
+- **npm** or **bun**
 - Modern web browser
 
 ### Installation
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/bhanuprakashpeddi-1432/portfolio.git
-   cd portfolio/tech-portfolio
+   git clone https://github.com/bhanuprakashpeddi-1432/tech-portfolio.git
+   cd tech-portfolio
    ```
 
 2. **Install dependencies**
@@ -113,35 +96,11 @@ This portfolio represents more than just a collection of my work—it's a reflec
 
 3. **Start the development server**
    ```bash
-   npm start
+   npm run dev
    ```
 
 4. **Open your browser**
-   Navigate to `http://localhost:3000` to see the portfolio in action!
-
-### 📧 Contact Form Setup (Optional)
-
-To make the contact form functional:
-
-1. **Install EmailJS**
-   ```bash
-   npm install @emailjs/browser
-   ```
-
-2. **Create EmailJS Account**
-   - Visit [EmailJS.com](https://www.emailjs.com/)
-   - Create a free account (200 emails/month)
-
-3. **Configure EmailJS**
-   - Create email service and template
-   - Update the configuration in `src/components/Contact.js`:
-   ```javascript
-   const EMAILJS_SERVICE_ID = 'your_service_id';
-   const EMAILJS_TEMPLATE_ID = 'your_template_id';
-   const EMAILJS_PUBLIC_KEY = 'your_public_key';
-   ```
-
-Detailed setup instructions are available in `EMAILJS_SETUP.md`.
+   Navigate to `http://localhost:8081` (or the port shown in your terminal) to see the portfolio in action!
 
 ---
 
@@ -149,186 +108,62 @@ Detailed setup instructions are available in `EMAILJS_SETUP.md`.
 
 ```
 tech-portfolio/
-├── public/
-│   ├── index.html          # Main HTML file
-│   ├── manifest.json       # PWA manifest
-│   ├── resume.pdf          # Resume file
-│   └── sitemap.xml         # SEO sitemap
+├── public/                 # Static assets (Resume PDF)
 ├── src/
-│   ├── components/         # React components
-│   │   ├── Home.js        # Homepage component
-│   │   ├── About.js       # About section
-│   │   ├── Skills.js      # Skills showcase
-│   │   ├── Projects.js    # Projects gallery
-│   │   ├── Contact.js     # Contact form
-│   │   └── Navigation.js  # Navigation bar
-│   ├── styles/            # Styling files
-│   │   ├── global.css     # Global styles
-│   │   └── img.png        # Profile image
-│   ├── App.js             # Main App component
-│   └── index.js           # Entry point
-├── README.md              # You are here!
-├── package.json           # Dependencies and scripts
-└── EMAILJS_SETUP.md       # Contact form setup guide
+│   ├── assets/             # Images and local assets
+│   ├── components/         
+│   │   ├── portfolio/      # Custom portfolio sections (Hero, About, Projects, etc.)
+│   │   └── ui/             # shadcn/ui components (buttons, dialogs, etc.)
+│   ├── hooks/              # Custom React hooks
+│   ├── lib/                # Utility functions
+│   ├── routes/             # TanStack file-based routing (__root.tsx, index.tsx)
+│   ├── styles.css          # Global Tailwind CSS styles
+│   ├── router.tsx          # Router configuration
+│   ├── server.ts           # SSR server entry point
+│   └── start.ts            # Client entry point
+├── package.json            
+├── vite.config.ts          # Vite & TanStack config
+├── tsconfig.json           # TypeScript configuration
+├── tailwind.config.js      # Tailwind configuration
+└── components.json         # shadcn/ui configuration
 ```
-
----
-
-## 🎨 Customization Guide
-
-### 🖼️ **Personal Information**
-1. **Update personal details** in each component
-2. **Replace profile image** in `src/styles/img.png`
-3. **Update resume** in `public/resume.pdf`
-4. **Modify social links** in contact section
-
-### 🎯 **Projects**
-Add your projects in `src/components/Projects.js`:
-```javascript
-{
-  title: "Your Project Name",
-  description: "Project description...",
-  technologies: ["React", "Node.js", "MongoDB"],
-  githubUrl: "https://github.com/yourusername/project",
-  liveUrl: "https://yourproject.com",
-  image: "project-image.jpg"
-}
-```
-
-### 🛠️ **Skills**
-Update your skills in `src/components/Skills.js`:
-```javascript
-{
-  name: "Your Technology",
-  icon: "tech-icon",
-  description: "Your experience with this technology"
-}
-```
-
-### 🎨 **Styling**
-- Modify colors in individual CSS files
-- Update animations in component files
-- Customize layouts and spacing
-
----
-
-## 📱 Responsive Design
-
-This portfolio is built with a mobile-first approach:
-
-- **📱 Mobile** (320px+) - Optimized for small screens
-- **📱 Tablet** (768px+) - Adapted for medium screens  
-- **💻 Desktop** (1024px+) - Full-featured experience
-- **🖥️ Large Desktop** (1440px+) - Enhanced layout
-
----
-
-## ⚡ Performance Optimizations
-
-- **Code Splitting** - Components loaded on demand
-- **Image Optimization** - Compressed and responsive images
-- **Lazy Loading** - Content loaded as needed
-- **Minified Assets** - Reduced file sizes
-- **Caching Strategy** - Optimized for faster subsequent visits
-
----
-
-## 🌟 Browser Support
-
-- ✅ Chrome (90+)
-- ✅ Firefox (88+)
-- ✅ Safari (14+)
-- ✅ Edge (90+)
-- ✅ Mobile browsers
 
 ---
 
 ## 🚀 Deployment
 
-### Build for Production
-```bash
-npm run build
-```
+This project uses **Nitro** under the hood, making it incredibly easy to deploy to modern serverless platforms. 
 
-### Deploy to Netlify
-1. Connect your GitHub repository
-2. Set build command: `npm run build`
-3. Set publish directory: `build`
-4. Deploy!
+> **Note:** Because this uses Server-Side Rendering (SSR) via TanStack Start, standard static hosting (like GitHub Pages) is not recommended.
 
-### Deploy to Vercel
-```bash
-npm install -g vercel
-vercel --prod
-```
+### Deploy to Vercel (Recommended)
+Vercel natively supports Vite and Nitro.
+1. Connect your GitHub repository to Vercel.
+2. Vercel will automatically detect the framework.
+3. Click **Deploy**.
 
----
-
-## 🤝 Contributing
-
-While this is a personal portfolio, I welcome suggestions and feedback!
-
-1. **Fork the repository**
-2. **Create a feature branch** (`git checkout -b feature/amazing-feature`)
-3. **Commit your changes** (`git commit -m 'Add amazing feature'`)
-4. **Push to the branch** (`git push origin feature/amazing-feature`)
-5. **Open a Pull Request**
-
----
-
-## 📝 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+### Deploy to Cloudflare Pages
+The project is pre-configured with the `@lovable.dev/vite-tanstack-config` which defaults to the `cloudflare-module` preset.
+1. Connect your repository to Cloudflare Pages.
+2. Build command: `npm run build`
+3. Output directory: `.output/public`
 
 ---
 
 ## 👨‍💻 About Me
 
-Hi! I'm **Bhanu Prakash Peddi**, a passionate Full-Stack Developer from Vijayawada, India. I love creating web applications that not only function flawlessly but also provide exceptional user experiences.
+Hi! I'm **Bhanu Prakash Peddi**, a passionate Full-Stack Developer and AI/ML Enthusiast from Vijayawada, India. I love creating web applications that not only function flawlessly but also provide exceptional user experiences.
 
-### 🛠️ **My Tech Stack**
-- **Frontend:** React.js, JavaScript, HTML5, CSS3
-- **Backend:** Node.js, Express.js
-- **Databases:** MongoDB, PostgreSQL, MySQL
-- **Cloud:** AWS, Google Cloud Platform
-- **Tools:** Git, Docker, VS Code
-
-### 🌱 **Currently Learning**
-- Advanced React patterns
-- Cloud architecture
-- DevOps practices
-- AI/ML integration
-
----
-
-## 📞 Get In Touch
-
-I'm always open to discussing new opportunities, collaborations, or just chatting about technology!
-
+### 📞 Get In Touch
 - 📧 **Email:** [bhanuprakashpeddi5@gmail.com](mailto:bhanuprakashpeddi5@gmail.com)
 - 💼 **LinkedIn:** [bhanu-prakash-peddi](https://linkedin.com/in/bhanu-prakash-peddi)
 - 🐙 **GitHub:** [bhanuprakashpeddi-1432](https://github.com/bhanuprakashpeddi-1432)
-- 🌐 **Portfolio:** [bhanuprakashpeddi.tech](https://bhanuprakashpeddi.tech)
+- 🌐 **Portfolio:** [bhanuprakashpeddi.dev](https://bhanuprakashpeddi.dev)
 - 📱 **Phone:** +91 9121086544
 
 ---
 
-## ⭐ Show Your Support
-
-If you found this portfolio inspiring or helpful, please consider:
-- ⭐ **Starring the repository**
-- 🍴 **Forking for your own use**
-- 💬 **Sharing with others**
-- 🐛 **Reporting any issues**
-
----
-
 <div align="center">
-
-### 🎉 Thank you for visiting my portfolio!
-
-*Made with ❤️ by Bhanu Prakash Peddi*
-
-[![Portfolio](https://img.shields.io/badge/Portfolio-Visit%20Now-brightgreen?style=for-the-badge)](https://bhanuprakashpeddi.tech)
-
+  <h3>🎉 Thank you for visiting my portfolio!</h3>
+  <i>Made with ❤️ by Bhanu Prakash Peddi</i>
 </div>
