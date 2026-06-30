@@ -46,9 +46,9 @@ export function Hero() {
   };
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center pt-32 pb-20 bg-mesh">
+    <section id="home" className="relative min-h-screen flex items-center pt-24 lg:pt-32 pb-20 bg-mesh">
       <HeroOrbs />
-      <div className="relative mx-auto max-w-7xl w-full px-4 sm:px-6 grid lg:grid-cols-[1.2fr_1fr] gap-12 lg:gap-16 items-center">
+      <div className="relative mx-auto max-w-7xl w-full px-4 sm:px-6 grid lg:grid-cols-[1.2fr_1fr] gap-8 lg:gap-16 items-center">
         <motion.div
           initial="hidden"
           animate="show"
@@ -143,7 +143,7 @@ export function Hero() {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.3 }}
-          className="relative mx-auto"
+          className="relative mx-auto -mt-100 lg:-mt-50"
           ref={cardRef}
           onMouseMove={onMove}
           onMouseLeave={() => setTilt({ rx: 0, ry: 0 })}
@@ -152,7 +152,7 @@ export function Hero() {
           <motion.div
             animate={{ rotateX: tilt.rx, rotateY: tilt.ry }}
             transition={{ type: "spring", stiffness: 200, damping: 20 }}
-            className="relative h-72 w-72 sm:h-80 sm:w-80 lg:h-96 lg:w-96"
+            className="relative h-[24rem] w-[24rem] sm:h-[35rem] sm:w-[35rem] lg:h-[42rem] lg:w-[42rem]"
             style={{ transformStyle: "preserve-3d" }}
           >
             <img

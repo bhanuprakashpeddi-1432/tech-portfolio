@@ -1,7 +1,7 @@
 export const ROLES = [
   "Full-Stack Developer",
   "Software Engineer",
-  "AI/ML Engineer",
+  "AI/ML Enthusiast",
   "Problem Solver",
 ];
 
@@ -11,7 +11,7 @@ export const NAV_LINKS = [
   { id: "skills", label: "Skills" },
   { id: "projects", label: "Projects" },
   { id: "certifications", label: "Certifications" },
-  
+
   { id: "contact", label: "Contact" },
 ];
 
@@ -152,59 +152,11 @@ export const CERTIFICATIONS: Cert[] = [
     link: "https://www.credly.com/badges/1b023772-14a1-4301-992b-848c1c841b5f/linked_in_profile",
   },
   {
-    title: "Google Cloud Associate Engineer",
-    org: "Google Cloud",
-    status: "In Progress",
-    tags: ["GCP", "Cloud", "DevOps"],
-  },
-  {
-    title: "AWS Cloud Practitioner",
-    org: "Amazon Web Services",
-    status: "In Progress",
-    tags: ["AWS", "Cloud"],
-  },
-  {
     title: "Full Stack Web Development",
     org: "Coursera",
     year: "2023",
     status: "Completed",
     tags: ["HTML", "CSS", "JavaScript", "Node.js"],
-  },
-];
-
-export const LEARNING = [
-  {
-    title: "Advanced React Patterns",
-    provider: "React Training",
-    category: "Frontend Development",
-    progress: 65,
-    remaining: "2 weeks remaining",
-    description: "Hooks composition, suspense, server components, performance patterns.",
-    tags: ["React", "Hooks", "Performance"],
-    start: "Jan 2025",
-    end: "Mar 2025",
-  },
-  {
-    title: "AWS Solutions Architect",
-    provider: "AWS Training",
-    category: "Cloud Computing",
-    progress: 45,
-    remaining: "8 weeks remaining",
-    description: "Designing resilient, secure, and cost-optimized architectures on AWS.",
-    tags: ["AWS", "Architecture", "Cloud"],
-    start: "Dec 2024",
-    end: "Apr 2025",
-  },
-  {
-    title: "Docker & Kubernetes",
-    provider: "Linux Academy",
-    category: "DevOps",
-    progress: 70,
-    remaining: "4 weeks remaining",
-    description: "Containerization, orchestration, deployment pipelines.",
-    tags: ["Docker", "Kubernetes", "DevOps"],
-    start: "Nov 2024",
-    end: "Feb 2025",
   },
 ];
 
