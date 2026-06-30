@@ -8,7 +8,7 @@
 
 ## ✨ Live Preview
 
-🌐 **[Visit My Portfolio](https://bhanuprakashpeddi.tech)**
+🌐 **[Visit My Portfolio](http://bhanuprakashpeddi.dev)**
 
 ---
 
