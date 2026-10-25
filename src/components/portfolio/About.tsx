@@ -18,7 +18,7 @@ const cards = [
   {
     icon: Code2,
     title: "Tech Stack",
-    text: "React, JavaScript, Node.js, Python, MongoDB, PostgreSQL, Git, AWS, and modern web technologies.",
+    text: "React, JavaScript, Node.js, Java, MongoDB, PostgreSQL, Git, AWS, and modern web technologies.",
     color: "#f59e0b",
   },
 ];

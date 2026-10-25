@@ -7,7 +7,7 @@ type Msg = { id: number; role: "user" | "bot"; text: string; time: string };
 const REPLIES: { match: RegExp; reply: string }[] = [
   { match: /hi|hello|hey/i, reply: "Hey there! 👋 I'm Bhanu's assistant. Ask me about his skills, projects, or how to get in touch." },
   { match: /about|who|yourself/i, reply: "Bhanu Prakash Peddi is a full-stack developer & AI/ML engineer from Vijayawada, India. He builds scalable web apps and ML solutions." },
-  { match: /skill|tech|stack/i, reply: "Stack: React, Next.js, Node.js, Java/Spring Boot, FastAPI, Python (PyTorch, TensorFlow, scikit-learn), MongoDB, SQL, AWS, GCP." },
+  { match: /skill|tech|stack/i, reply: "Stack: React, Next.js, Node.js, Java/Spring Boot, FastAPI, MongoDB, SQL, AWS, GCP." },
   { match: /project|work/i, reply: "Featured: Grievance Management System (MERN + Socket.io). Also: Inventory dashboard, Course management, SaaS landing, WebRTC object detection, and more — scroll up to the Projects section!" },
   { match: /contact|email|reach|hire/i, reply: "📧 bhanuprakashpeddi5@gmail.com · 📱 +91 9121086544 · or use the contact form below." },
   { match: /resume|cv/i, reply: "You can grab the resume from the top-right of the page." },

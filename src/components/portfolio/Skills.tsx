@@ -1,19 +1,14 @@
 import { motion } from "framer-motion";
 import {
-  SiPython, SiPytorch, SiTensorflow, SiScikitlearn, SiNextdotjs,
+  SiNextdotjs,
   SiSpringboot, SiMongodb, SiMysql, SiGooglecloud, SiFastapi,
 } from "react-icons/si";
-import { FaReact, FaJs, FaCss3Alt, FaNodeJs, FaJava, FaGitAlt, FaBrain, FaAws } from "react-icons/fa";
+import { FaReact, FaJs, FaCss3Alt, FaNodeJs, FaJava, FaGitAlt, FaCode, FaAws } from "react-icons/fa";
 import { Section } from "./Section";
 import { SKILL_CATEGORIES } from "./data";
 import type { IconType } from "react-icons";
 
 const ICONS: Record<string, IconType> = {
-  Python: SiPython,
-  "Machine Learning": FaBrain,
-  PyTorch: SiPytorch,
-  TensorFlow: SiTensorflow,
-  "scikit-learn": SiScikitlearn,
   React: FaReact,
   "Next.js": SiNextdotjs,
   JavaScript: FaJs,
@@ -51,7 +46,7 @@ export function Skills() {
             </div>
             <div className="flex flex-wrap gap-3">
               {cat.items.map((item, i) => {
-                const Icon = ICONS[item] ?? FaBrain;
+                const Icon = ICONS[item] ?? FaCode;
                 return (
                   <motion.div
                     key={item}

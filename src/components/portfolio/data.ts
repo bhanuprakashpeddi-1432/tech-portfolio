@@ -17,11 +17,6 @@ export const NAV_LINKS = [
 
 export const SKILL_CATEGORIES = [
   {
-    name: "AI / ML",
-    color: "#a855f7",
-    items: ["Python", "Machine Learning", "PyTorch", "TensorFlow", "scikit-learn"],
-  },
-  {
     name: "Frontend",
     color: "#06b6d4",
     items: ["React", "Next.js", "JavaScript", "CSS"],
