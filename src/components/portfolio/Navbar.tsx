@@ -66,7 +66,7 @@ export function Navbar() {
 
           <div className="flex items-center gap-2">
             <a
-              href="/resume.pdf"
+              href="/Latest_resume.pdf"
               download="Bhanu_Prakash_Peddi_Resume.pdf"
               className="hidden sm:inline-flex relative items-center gap-2 rounded-xl px-4 py-2 text-sm font-medium border border-[#a855f7]/50 text-foreground hover:bg-[#a855f7]/10 transition-all hover:shadow-[0_0_24px_-4px_#a855f7]"
             >
@@ -77,6 +77,8 @@ export function Navbar() {
               className="lg:hidden grid h-10 w-10 place-items-center rounded-xl glass"
               onClick={() => setOpen((v) => !v)}
               aria-label="Toggle menu"
+              aria-expanded={open}
+              aria-controls="mobile-navigation"
             >
               {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
             </button>
@@ -91,6 +93,7 @@ export function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             className="lg:hidden mx-4 mt-2 glass-strong rounded-2xl p-4 flex flex-col gap-1"
+            id="mobile-navigation"
           >
             {NAV_LINKS.map((l) => (
               <button
@@ -102,7 +105,7 @@ export function Navbar() {
               </button>
             ))}
             <a
-              href="/resume.pdf"
+              href="/Latest_resume.pdf"
               download="Bhanu_Prakash_Peddi_Resume.pdf"
               className="mt-2 inline-flex items-center justify-center gap-2 rounded-lg px-3 py-2 text-sm font-medium bg-gradient-to-r from-[#a855f7] to-[#06b6d4] text-white"
             >

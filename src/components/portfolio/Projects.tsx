@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Github, ExternalLink, Info, X, Star } from "lucide-react";
 import { Section } from "./Section";
@@ -26,7 +26,13 @@ export function Projects() {
   );
 }
 
-function GradientBorder({ children, className = "" }: { children: React.ReactNode; className?: string }) {
+function GradientBorder({
+  children,
+  className = "",
+}: {
+  children: React.ReactNode;
+  className?: string;
+}) {
   return (
     <div
       className={`relative rounded-2xl p-[1px] bg-gradient-to-br from-white/10 via-white/5 to-white/10 hover:from-[#a855f7]/60 hover:via-[#06b6d4]/40 hover:to-[#f59e0b]/60 transition-colors ${className}`}
@@ -53,9 +59,7 @@ function FeaturedCard({ project, onOpen }: { project: Project; onOpen: () => voi
               <span className="inline-flex items-center gap-1.5 text-xs uppercase tracking-widest text-[#f59e0b]">
                 <Star className="h-3.5 w-3.5 fill-[#f59e0b]" /> Featured Project
               </span>
-              <h3 className="mt-3 font-display font-bold text-3xl sm:text-4xl">
-                {project.title}
-              </h3>
+              <h3 className="mt-3 font-display font-bold text-3xl sm:text-4xl">{project.title}</h3>
               <p className="mt-4 text-muted-foreground leading-relaxed">{project.description}</p>
               <div className="mt-5 flex flex-wrap gap-2">
                 {project.tags.map((t) => (
@@ -85,11 +89,25 @@ function FeaturedCard({ project, onOpen }: { project: Project; onOpen: () => voi
               <div className="absolute inset-0 bg-mesh opacity-60" />
               <div className="absolute inset-0 grid place-items-center">
                 <div className="font-mono text-xs space-y-2 p-6 text-left text-muted-foreground">
-                  <div><span className="text-[#06b6d4]">const</span> grievance = {`{`}</div>
-                  <div className="pl-4"><span className="text-[#a855f7]">status</span>: <span className="text-emerald-300">'open'</span>,</div>
-                  <div className="pl-4"><span className="text-[#a855f7]">priority</span>: <span className="text-amber-300">'high'</span>,</div>
-                  <div className="pl-4"><span className="text-[#a855f7]">assignedTo</span>: <span className="text-emerald-300">'admin'</span>,</div>
-                  <div className="pl-4"><span className="text-[#a855f7]">realtime</span>: <span className="text-orange-300">true</span></div>
+                  <div>
+                    <span className="text-[#06b6d4]">const</span> grievance = {`{`}
+                  </div>
+                  <div className="pl-4">
+                    <span className="text-[#a855f7]">status</span>:{" "}
+                    <span className="text-emerald-300">'open'</span>,
+                  </div>
+                  <div className="pl-4">
+                    <span className="text-[#a855f7]">priority</span>:{" "}
+                    <span className="text-amber-300">'high'</span>,
+                  </div>
+                  <div className="pl-4">
+                    <span className="text-[#a855f7]">assignedTo</span>:{" "}
+                    <span className="text-emerald-300">'admin'</span>,
+                  </div>
+                  <div className="pl-4">
+                    <span className="text-[#a855f7]">realtime</span>:{" "}
+                    <span className="text-orange-300">true</span>
+                  </div>
                   <div>{`}`}</div>
                 </div>
               </div>
@@ -124,9 +142,7 @@ function ProjectCard({
       <GradientBorder className="h-full">
         <div className="glass rounded-2xl p-6 h-full flex flex-col">
           <h3 className="font-display font-semibold text-xl">{project.title}</h3>
-          <p className="mt-2 text-sm text-muted-foreground line-clamp-3">
-            {project.description}
-          </p>
+          <p className="mt-2 text-sm text-muted-foreground line-clamp-3">{project.description}</p>
           <div className="mt-4 flex flex-wrap gap-1.5">
             {visible.map((t) => (
               <Tag key={t}>{t}</Tag>
@@ -175,7 +191,9 @@ function Tag({ children, muted = false }: { children: React.ReactNode; muted?: b
   return (
     <span
       className={`px-2.5 py-1 rounded-md text-xs font-medium border transition-colors hover:border-[#a855f7]/60 hover:text-foreground ${
-        muted ? "bg-muted/30 border-border text-muted-foreground" : "bg-white/[0.03] border-border text-foreground/80"
+        muted
+          ? "bg-muted/30 border-border text-muted-foreground"
+          : "bg-white/[0.03] border-border text-foreground/80"
       }`}
     >
       {children}
@@ -184,6 +202,14 @@ function Tag({ children, muted = false }: { children: React.ReactNode; muted?: b
 }
 
 function ProjectModal({ project, onClose }: { project: Project; onClose: () => void }) {
+  useEffect(() => {
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") onClose();
+    };
+    document.addEventListener("keydown", onKeyDown);
+    return () => document.removeEventListener("keydown", onKeyDown);
+  }, [onClose]);
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -191,6 +217,9 @@ function ProjectModal({ project, onClose }: { project: Project; onClose: () => v
       exit={{ opacity: 0 }}
       className="fixed inset-0 z-[120] grid place-items-center p-4 bg-black/70 backdrop-blur-sm"
       onClick={onClose}
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="project-modal-title"
     >
       <motion.div
         initial={{ scale: 0.95, opacity: 0 }}
@@ -206,7 +235,9 @@ function ProjectModal({ project, onClose }: { project: Project; onClose: () => v
         >
           <X className="h-4 w-4" />
         </button>
-        <h3 className="font-display font-bold text-2xl pr-8">{project.title}</h3>
+        <h3 id="project-modal-title" className="font-display font-bold text-2xl pr-8">
+          {project.title}
+        </h3>
         <p className="mt-4 text-muted-foreground leading-relaxed">
           {project.longDescription ?? project.description}
         </p>

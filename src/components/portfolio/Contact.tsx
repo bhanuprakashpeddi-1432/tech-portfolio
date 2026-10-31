@@ -45,20 +45,46 @@ export function Contact() {
           transition={{ duration: 0.6 }}
           className="space-y-4"
         >
-          <InfoCard icon={Mail} title="Email" value="bhanuprakashpeddi5@gmail.com" href="mailto:bhanuprakashpeddi5@gmail.com" color="#a855f7" />
-          <InfoCard icon={Phone} title="Phone" value="+91 9121086544" href="tel:+919121086544" color="#06b6d4" />
+          <InfoCard
+            icon={Mail}
+            title="Email"
+            value="bhanuprakashpeddi5@gmail.com"
+            href="mailto:bhanuprakashpeddi5@gmail.com"
+            color="#a855f7"
+          />
+          <InfoCard
+            icon={Phone}
+            title="Phone"
+            value="+91 9121086544"
+            href="tel:+919121086544"
+            color="#06b6d4"
+          />
           <InfoCard icon={MapPin} title="Location" value="Vijayawada, India" color="#f59e0b" />
 
           <div className="glass rounded-2xl p-5 flex items-center justify-between gap-4">
             <div>
               <p className="text-sm text-muted-foreground">Find me on</p>
               <div className="mt-2 flex gap-2">
-                <a href="https://linkedin.com/in/bhanu-prakash-peddi" target="_blank" rel="noreferrer" className="grid h-10 w-10 place-items-center rounded-xl glass hover:text-[#06b6d4] hover:scale-110 transition-all"><Linkedin className="h-4 w-4" /></a>
-                <a href="https://github.com/bhanuprakashpeddi-1432" target="_blank" rel="noreferrer" className="grid h-10 w-10 place-items-center rounded-xl glass hover:text-[#a855f7] hover:scale-110 transition-all"><Github className="h-4 w-4" /></a>
+                <a
+                  href="https://linkedin.com/in/bhanu-prakash-peddi"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="grid h-10 w-10 place-items-center rounded-xl glass hover:text-[#06b6d4] hover:scale-110 transition-all"
+                >
+                  <Linkedin className="h-4 w-4" />
+                </a>
+                <a
+                  href="https://github.com/bhanuprakashpeddi-1432"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="grid h-10 w-10 place-items-center rounded-xl glass hover:text-[#a855f7] hover:scale-110 transition-all"
+                >
+                  <Github className="h-4 w-4" />
+                </a>
               </div>
             </div>
             <a
-              href="/resume.pdf"
+              href="/Latest_resume.pdf"
               download="Bhanu_Prakash_Peddi_Resume.pdf"
               className="inline-flex items-center gap-2 rounded-xl px-4 py-2.5 text-sm font-medium bg-gradient-to-r from-[#a855f7] to-[#06b6d4] text-white shadow-lg shadow-[#a855f7]/30 hover:scale-[1.03] transition-all"
             >
@@ -82,8 +108,14 @@ export function Contact() {
           </div>
           <Field name="subject" label="Subject" required />
           <div>
-            <label className="text-xs uppercase tracking-widest text-muted-foreground">Message</label>
+            <label
+              htmlFor="message"
+              className="text-xs uppercase tracking-widest text-muted-foreground"
+            >
+              Message
+            </label>
             <textarea
+              id="message"
               name="message"
               required
               rows={5}
@@ -95,7 +127,15 @@ export function Contact() {
             disabled={loading}
             className="w-full inline-flex items-center justify-center gap-2 rounded-xl px-5 py-3 font-medium bg-gradient-to-r from-[#a855f7] to-[#06b6d4] text-white shadow-lg shadow-[#a855f7]/30 hover:shadow-[#a855f7]/60 hover:scale-[1.01] disabled:opacity-70 disabled:hover:scale-100 transition-all"
           >
-            {loading ? <><Loader2 className="h-4 w-4 animate-spin" /> Sending…</> : <><Send className="h-4 w-4" /> Send Message</>}
+            {loading ? (
+              <>
+                <Loader2 className="h-4 w-4 animate-spin" /> Sending…
+              </>
+            ) : (
+              <>
+                <Send className="h-4 w-4" /> Send Message
+              </>
+            )}
           </button>
         </motion.form>
       </div>
@@ -103,11 +143,24 @@ export function Contact() {
   );
 }
 
-function Field({ name, label, type = "text", required }: { name: string; label: string; type?: string; required?: boolean }) {
+function Field({
+  name,
+  label,
+  type = "text",
+  required,
+}: {
+  name: string;
+  label: string;
+  type?: string;
+  required?: boolean;
+}) {
   return (
     <div>
-      <label className="text-xs uppercase tracking-widest text-muted-foreground">{label}</label>
+      <label htmlFor={name} className="text-xs uppercase tracking-widest text-muted-foreground">
+        {label}
+      </label>
       <input
+        id={name}
         name={name}
         type={type}
         required={required}
@@ -118,10 +171,17 @@ function Field({ name, label, type = "text", required }: { name: string; label: 
 }
 
 function InfoCard({
-  icon: Icon, title, value, href, color,
+  icon: Icon,
+  title,
+  value,
+  href,
+  color,
 }: {
   icon: React.ComponentType<{ className?: string }>;
-  title: string; value: string; href?: string; color: string;
+  title: string;
+  value: string;
+  href?: string;
+  color: string;
 }) {
   const Wrap: React.ElementType = href ? "a" : "div";
   return (
@@ -149,12 +209,31 @@ export function Footer() {
     <footer className="border-t border-border py-8">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
         <p className="text-sm text-muted-foreground">
-          © 2025 Bhanuprakash Peddi. All rights reserved.
+          © {new Date().getFullYear()} Bhanuprakash Peddi. All rights reserved.
         </p>
         <div className="flex gap-2">
-          <a href="https://linkedin.com/in/bhanu-prakash-peddi" target="_blank" rel="noreferrer" className="grid h-9 w-9 place-items-center rounded-lg glass hover:text-[#06b6d4]"><Linkedin className="h-4 w-4" /></a>
-          <a href="https://github.com/bhanuprakashpeddi-1432" target="_blank" rel="noreferrer" className="grid h-9 w-9 place-items-center rounded-lg glass hover:text-[#a855f7]"><Github className="h-4 w-4" /></a>
-          <a href="mailto:bhanuprakashpeddi5@gmail.com" className="grid h-9 w-9 place-items-center rounded-lg glass hover:text-[#f59e0b]"><Mail className="h-4 w-4" /></a>
+          <a
+            href="https://linkedin.com/in/bhanu-prakash-peddi"
+            target="_blank"
+            rel="noreferrer"
+            className="grid h-9 w-9 place-items-center rounded-lg glass hover:text-[#06b6d4]"
+          >
+            <Linkedin className="h-4 w-4" />
+          </a>
+          <a
+            href="https://github.com/bhanuprakashpeddi-1432"
+            target="_blank"
+            rel="noreferrer"
+            className="grid h-9 w-9 place-items-center rounded-lg glass hover:text-[#a855f7]"
+          >
+            <Github className="h-4 w-4" />
+          </a>
+          <a
+            href="mailto:bhanuprakashpeddi5@gmail.com"
+            className="grid h-9 w-9 place-items-center rounded-lg glass hover:text-[#f59e0b]"
+          >
+            <Mail className="h-4 w-4" />
+          </a>
         </div>
       </div>
     </footer>

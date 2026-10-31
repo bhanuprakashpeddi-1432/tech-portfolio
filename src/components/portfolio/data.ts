@@ -11,7 +11,7 @@ export const NAV_LINKS = [
   { id: "skills", label: "Skills" },
   { id: "projects", label: "Projects" },
   { id: "certifications", label: "Certifications" },
-
+  { id: "profiles", label: "Profiles" },
   { id: "contact", label: "Contact" },
 ];
 
@@ -105,8 +105,7 @@ export const PROJECTS: Project[] = [
   },
   {
     title: "Expense Tracker",
-    description:
-      "Lightweight expense tracking app with categorized spending and quick entry.",
+    description: "Lightweight expense tracking app with categorized spending and quick entry.",
     tags: ["JavaScript", "Node.js"],
     github: "https://github.com/bhanuprakashpeddi-1432/Expense-Tracker",
   },
