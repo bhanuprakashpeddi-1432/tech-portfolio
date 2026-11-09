@@ -1,9 +1,22 @@
 import { motion } from "framer-motion";
 import {
   SiNextdotjs,
-  SiSpringboot, SiMongodb, SiMysql, SiGooglecloud, SiFastapi,
+  SiSpringboot,
+  SiMongodb,
+  SiMysql,
+  SiGooglecloud,
+  SiFastapi,
 } from "react-icons/si";
-import { FaReact, FaJs, FaCss3Alt, FaNodeJs, FaJava, FaGitAlt, FaCode, FaAws } from "react-icons/fa";
+import {
+  FaReact,
+  FaJs,
+  FaCss3Alt,
+  FaNodeJs,
+  FaJava,
+  FaGitAlt,
+  FaCode,
+  FaAws,
+} from "react-icons/fa";
 import { Section } from "./Section";
 import { SKILL_CATEGORIES } from "./data";
 import type { IconType } from "react-icons";

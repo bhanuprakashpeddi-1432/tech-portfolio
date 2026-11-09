@@ -1,5 +1,4 @@
-@import "tailwindcss" source(none);
-@source "../src";
+@import "tailwindcss";
 @import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
@@ -38,51 +37,61 @@
 
 :root {
   --radius: 0.875rem;
-  /* Old Money palette: deep forest, cream, antique gold, oxblood */
-  --background: oklch(0.18 0.02 150);
-  --foreground: oklch(0.94 0.025 85);
-  --card: oklch(0.22 0.025 150);
-  --card-foreground: oklch(0.94 0.025 85);
-  --popover: oklch(0.22 0.025 150);
-  --popover-foreground: oklch(0.94 0.025 85);
-  --primary: oklch(0.72 0.12 85);
-  --primary-foreground: oklch(0.18 0.02 150);
-  --secondary: oklch(0.26 0.03 150);
-  --secondary-foreground: oklch(0.94 0.025 85);
-  --muted: oklch(0.26 0.03 150);
-  --muted-foreground: oklch(0.74 0.025 85);
-  --accent: oklch(0.5 0.12 30);
-  --accent-foreground: oklch(0.96 0.02 85);
-  --destructive: oklch(0.5 0.18 25);
-  --destructive-foreground: oklch(0.96 0.02 85);
-  --border: oklch(0.72 0.08 85 / 18%);
-  --input: oklch(0.28 0.03 150);
-  --ring: oklch(0.72 0.12 85);
-  --violet: oklch(0.5 0.12 30);     /* oxblood */
-  --cyan: oklch(0.55 0.08 180);     /* patina teal */
-  --amber: oklch(0.78 0.13 85);     /* antique gold */
-  --emerald: oklch(0.45 0.08 150);  /* forest */
+  /* Obsidian & Burnt Terracotta (Warm Industrial) */
+  --background: #0f0e0c;
+  --foreground: #f4f0ea;
+  --card: #1c1a17;
+  --card-foreground: #f4f0ea;
+  --popover: #1c1a17;
+  --popover-foreground: #f4f0ea;
+  --primary: #e05a47;
+  --primary-foreground: #f4f0ea;
+  --secondary: #1c1a17;
+  --secondary-foreground: #f4f0ea;
+  --muted: #1c1a17;
+  --muted-foreground: #a39e93;
+  --accent: #d4a359;
+  --accent-foreground: #0f0e0c;
+  --destructive: #e05a47;
+  --destructive-foreground: #f4f0ea;
+  --border: #2e2b26;
+  --input: #2e2b26;
+  --ring: #e05a47;
+  --violet: #e05a47; /* burnt terracotta */
+  --cyan: #a39e93; /* stone grey */
+  --amber: #d4a359; /* ochre gold */
+  --emerald: #2e2b26; /* muted bronze-grey */
 }
 
 .dark {
-  --background: oklch(0.18 0.02 150);
-  --foreground: oklch(0.94 0.025 85);
+  --background: #0f0e0c;
+  --foreground: #f4f0ea;
 }
 
 @layer base {
-  * { border-color: var(--color-border); }
-  html { scroll-behavior: smooth; }
+  * {
+    border-color: var(--color-border);
+  }
+  html {
+    scroll-behavior: smooth;
+  }
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
     font-family: var(--font-sans);
     overflow-x: hidden;
   }
-  h1, h2, h3, h4 { font-family: var(--font-display); letter-spacing: -0.02em; }
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+  }
 }
 
 @utility text-gradient {
-  background: linear-gradient(135deg, #d4b87a 0%, #f3e3bf 45%, #8a3a2f 100%);
+  background: linear-gradient(135deg, #d4a359 0%, #f4f0ea 45%, #e05a47 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -91,17 +100,19 @@
 @utility glass {
   background: color-mix(in oklab, var(--color-card) 55%, transparent);
   backdrop-filter: blur(16px) saturate(140%);
-  border: 1px solid color-mix(in oklab, #d4b87a 18%, transparent);
+  border: 1px solid color-mix(in oklab, #d4a359 18%, transparent);
 }
 
 @utility glass-strong {
   background: color-mix(in oklab, var(--color-card) 78%, transparent);
   backdrop-filter: blur(20px) saturate(160%);
-  border: 1px solid color-mix(in oklab, #d4b87a 22%, transparent);
+  border: 1px solid color-mix(in oklab, #d4a359 22%, transparent);
 }
 
 @utility glow-violet {
-  box-shadow: 0 0 40px -10px #d4b87aaa, 0 0 80px -30px #8a3a2f66;
+  box-shadow:
+    0 0 40px -10px #d4a359aa,
+    0 0 80px -30px #e05a4766;
 }
 
 @utility noise-overlay {
@@ -110,9 +121,9 @@
 
 .bg-mesh {
   background-image:
-    radial-gradient(at 20% 10%, #d4b87a26 0px, transparent 50%),
-    radial-gradient(at 80% 20%, #8a3a2f26 0px, transparent 50%),
-    radial-gradient(at 50% 80%, #2f4a3a33 0px, transparent 50%);
+    radial-gradient(at 20% 10%, #d4a35926 0px, transparent 50%),
+    radial-gradient(at 80% 20%, #e05a4726 0px, transparent 50%),
+    radial-gradient(at 50% 80%, #2e2b2633 0px, transparent 50%);
 }
 
 .noise::before {
@@ -126,11 +137,24 @@
   mix-blend-mode: overlay;
 }
 
-@keyframes spin-slow { to { transform: rotate(360deg); } }
-.animate-spin-slow { animation: spin-slow 8s linear infinite; }
+@keyframes spin-slow {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.animate-spin-slow {
+  animation: spin-slow 8s linear infinite;
+}
 
 @keyframes float-orb {
-  0%, 100% { transform: translate(0,0) scale(1); }
-  50% { transform: translate(30px,-40px) scale(1.1); }
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(30px, -40px) scale(1.1);
+  }
 }
-.animate-orb { animation: float-orb 14s ease-in-out infinite; }
+.animate-orb {
+  animation: float-orb 14s ease-in-out infinite;
+}

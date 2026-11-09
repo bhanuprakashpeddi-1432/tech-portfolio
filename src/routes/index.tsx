@@ -21,7 +21,10 @@ export const Route = createFileRoute("/")({
         content:
           "Portfolio of Bhanu Prakash Peddi — Full-Stack Developer, AI/ML Engineer, and Problem Solver. Explore projects, skills, and certifications.",
       },
-      { property: "og:title", content: "Bhanu Prakash Peddi | Full-Stack Developer & AI/ML Engineer" },
+      {
+        property: "og:title",
+        content: "Bhanu Prakash Peddi | Full-Stack Developer & AI/ML Engineer",
+      },
       {
         property: "og:description",
         content:
@@ -44,7 +47,7 @@ function Index() {
         <Skills />
         <Projects />
         <Certifications />
-        
+
         <Profiles />
         <Contact />
       </main>

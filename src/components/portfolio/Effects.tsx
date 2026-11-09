@@ -9,7 +9,7 @@ export function ScrollProgress() {
       style={{ scaleX }}
       className="fixed top-0 left-0 right-0 h-[3px] origin-left z-[110]"
     >
-      <div className="h-full w-full bg-gradient-to-r from-[#a855f7] via-[#06b6d4] to-[#f59e0b]" />
+      <div className="h-full w-full bg-gradient-to-r from-[#E05A47] via-[#D4A359] to-[#D4A359]" />
     </motion.div>
   );
 }
@@ -40,11 +40,11 @@ export function CustomCursor() {
     <>
       <motion.div
         style={{ x: tx, y: ty }}
-        className="pointer-events-none fixed top-0 left-0 z-[200] -ml-1.5 -mt-1.5 h-3 w-3 rounded-full bg-[#a855f7] mix-blend-screen shadow-[0_0_20px_#a855f7]"
+        className="pointer-events-none fixed top-0 left-0 z-[200] -ml-1.5 -mt-1.5 h-3 w-3 rounded-full bg-[#E05A47] mix-blend-screen shadow-[0_0_20px_#E05A47]"
       />
       <motion.div
         style={{ x: rx, y: ry }}
-        className="pointer-events-none fixed top-0 left-0 z-[199] -ml-5 -mt-5 h-10 w-10 rounded-full border border-[#06b6d4]/40 mix-blend-screen"
+        className="pointer-events-none fixed top-0 left-0 z-[199] -ml-5 -mt-5 h-10 w-10 rounded-full border border-[#D4A359]/40 mix-blend-screen"
       />
     </>
   );
@@ -53,9 +53,15 @@ export function CustomCursor() {
 export function HeroOrbs() {
   return (
     <div className="absolute inset-0 overflow-hidden pointer-events-none">
-      <div className="absolute -top-32 -left-20 h-[28rem] w-[28rem] rounded-full bg-[#a855f7]/30 blur-[120px] animate-orb" />
-      <div className="absolute top-40 -right-20 h-[24rem] w-[24rem] rounded-full bg-[#06b6d4]/25 blur-[120px] animate-orb" style={{ animationDelay: "-4s" }} />
-      <div className="absolute bottom-0 left-1/3 h-[22rem] w-[22rem] rounded-full bg-[#f59e0b]/20 blur-[120px] animate-orb" style={{ animationDelay: "-8s" }} />
+      <div className="absolute -top-32 -left-20 h-[28rem] w-[28rem] rounded-full bg-[#E05A47]/30 blur-[120px] animate-orb" />
+      <div
+        className="absolute top-40 -right-20 h-[24rem] w-[24rem] rounded-full bg-[#D4A359]/25 blur-[120px] animate-orb"
+        style={{ animationDelay: "-4s" }}
+      />
+      <div
+        className="absolute bottom-0 left-1/3 h-[22rem] w-[22rem] rounded-full bg-[#D4A359]/20 blur-[120px] animate-orb"
+        style={{ animationDelay: "-8s" }}
+      />
       <Stars />
     </div>
   );

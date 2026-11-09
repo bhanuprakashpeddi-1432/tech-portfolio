@@ -50,16 +50,16 @@ export function Contact() {
             title="Email"
             value="bhanuprakashpeddi5@gmail.com"
             href="mailto:bhanuprakashpeddi5@gmail.com"
-            color="#a855f7"
+            color="#E05A47"
           />
           <InfoCard
             icon={Phone}
             title="Phone"
             value="+91 9121086544"
             href="tel:+919121086544"
-            color="#06b6d4"
+            color="#D4A359"
           />
-          <InfoCard icon={MapPin} title="Location" value="Vijayawada, India" color="#f59e0b" />
+          <InfoCard icon={MapPin} title="Location" value="Vijayawada, India" color="#A39E93" />
 
           <div className="glass rounded-2xl p-5 flex items-center justify-between gap-4">
             <div>
@@ -69,7 +69,7 @@ export function Contact() {
                   href="https://linkedin.com/in/bhanu-prakash-peddi"
                   target="_blank"
                   rel="noreferrer"
-                  className="grid h-10 w-10 place-items-center rounded-xl glass hover:text-[#06b6d4] hover:scale-110 transition-all"
+                  className="grid h-10 w-10 place-items-center rounded-xl glass hover:text-[#D4A359] hover:scale-110 transition-all"
                 >
                   <Linkedin className="h-4 w-4" />
                 </a>
@@ -77,7 +77,7 @@ export function Contact() {
                   href="https://github.com/bhanuprakashpeddi-1432"
                   target="_blank"
                   rel="noreferrer"
-                  className="grid h-10 w-10 place-items-center rounded-xl glass hover:text-[#a855f7] hover:scale-110 transition-all"
+                  className="grid h-10 w-10 place-items-center rounded-xl glass hover:text-[#E05A47] hover:scale-110 transition-all"
                 >
                   <Github className="h-4 w-4" />
                 </a>
@@ -86,7 +86,7 @@ export function Contact() {
             <a
               href="/Latest_resume.pdf"
               download="Bhanu_Prakash_Peddi_Resume.pdf"
-              className="inline-flex items-center gap-2 rounded-xl px-4 py-2.5 text-sm font-medium bg-gradient-to-r from-[#a855f7] to-[#06b6d4] text-white shadow-lg shadow-[#a855f7]/30 hover:scale-[1.03] transition-all"
+              className="inline-flex items-center gap-2 rounded-xl px-4 py-2.5 text-sm font-medium bg-gradient-to-r from-[#E05A47] to-[#D4A359] text-[#1a1a1a] shadow-lg shadow-[#E05A47]/30 hover:scale-[1.03] transition-all"
             >
               <Download className="h-4 w-4" /> Resume
             </a>
@@ -119,13 +119,13 @@ export function Contact() {
               name="message"
               required
               rows={5}
-              className="mt-1.5 w-full rounded-xl bg-white/[0.04] border border-border focus:border-[#a855f7] focus:ring-2 focus:ring-[#a855f7]/30 outline-none px-4 py-3 text-sm transition-all resize-none"
+              className="mt-1.5 w-full rounded-xl bg-white/[0.04] border border-border focus:border-[#E05A47] focus:ring-2 focus:ring-[#E05A47]/30 outline-none px-4 py-3 text-sm transition-all resize-none"
             />
           </div>
           <button
             type="submit"
             disabled={loading}
-            className="w-full inline-flex items-center justify-center gap-2 rounded-xl px-5 py-3 font-medium bg-gradient-to-r from-[#a855f7] to-[#06b6d4] text-white shadow-lg shadow-[#a855f7]/30 hover:shadow-[#a855f7]/60 hover:scale-[1.01] disabled:opacity-70 disabled:hover:scale-100 transition-all"
+            className="w-full inline-flex items-center justify-center gap-2 rounded-xl px-5 py-3 font-medium bg-gradient-to-r from-[#E05A47] to-[#D4A359] text-[#1a1a1a] shadow-lg shadow-[#E05A47]/30 hover:shadow-[#E05A47]/60 hover:scale-[1.01] disabled:opacity-70 disabled:hover:scale-100 transition-all"
           >
             {loading ? (
               <>
@@ -164,7 +164,7 @@ function Field({
         name={name}
         type={type}
         required={required}
-        className="mt-1.5 w-full rounded-xl bg-white/[0.04] border border-border focus:border-[#a855f7] focus:ring-2 focus:ring-[#a855f7]/30 outline-none px-4 py-3 text-sm transition-all"
+        className="mt-1.5 w-full rounded-xl bg-white/[0.04] border border-border focus:border-[#E05A47] focus:ring-2 focus:ring-[#E05A47]/30 outline-none px-4 py-3 text-sm transition-all"
       />
     </div>
   );
@@ -216,7 +216,7 @@ export function Footer() {
             href="https://linkedin.com/in/bhanu-prakash-peddi"
             target="_blank"
             rel="noreferrer"
-            className="grid h-9 w-9 place-items-center rounded-lg glass hover:text-[#06b6d4]"
+            className="grid h-9 w-9 place-items-center rounded-lg glass hover:text-[#D4A359]"
           >
             <Linkedin className="h-4 w-4" />
           </a>
@@ -224,13 +224,13 @@ export function Footer() {
             href="https://github.com/bhanuprakashpeddi-1432"
             target="_blank"
             rel="noreferrer"
-            className="grid h-9 w-9 place-items-center rounded-lg glass hover:text-[#a855f7]"
+            className="grid h-9 w-9 place-items-center rounded-lg glass hover:text-[#E05A47]"
           >
             <Github className="h-4 w-4" />
           </a>
           <a
             href="mailto:bhanuprakashpeddi5@gmail.com"
-            className="grid h-9 w-9 place-items-center rounded-lg glass hover:text-[#f59e0b]"
+            className="grid h-9 w-9 place-items-center rounded-lg glass hover:text-[#D4A359]"
           >
             <Mail className="h-4 w-4" />
           </a>

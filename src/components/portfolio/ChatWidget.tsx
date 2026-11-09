@@ -93,7 +93,7 @@ export function ChatWidget() {
         transition={{ delay: 1.5, type: "spring" }}
         whileHover={{ scale: 1.08 }}
         whileTap={{ scale: 0.95 }}
-        className="fixed bottom-6 right-6 z-[95] grid h-14 w-14 place-items-center rounded-full bg-gradient-to-br from-[#a855f7] to-[#06b6d4] text-white shadow-lg shadow-[#a855f7]/50"
+        className="fixed bottom-6 right-6 z-[95] grid h-14 w-14 place-items-center rounded-full bg-gradient-to-br from-[#E05A47] to-[#D4A359] text-[#1a1a1a] shadow-lg shadow-[#E05A47]/50"
         aria-label="Open chat"
       >
         <AnimatePresence mode="wait">
@@ -128,8 +128,8 @@ export function ChatWidget() {
             transition={{ type: "spring", stiffness: 260, damping: 24 }}
             className="fixed bottom-24 right-6 z-[95] w-[calc(100vw-3rem)] sm:w-[360px] h-[480px] glass-strong rounded-2xl overflow-hidden flex flex-col"
           >
-            <div className="px-4 py-3 border-b border-border flex items-center gap-3 bg-gradient-to-r from-[#a855f7]/20 to-[#06b6d4]/20">
-              <div className="relative grid h-9 w-9 place-items-center rounded-full bg-gradient-to-br from-[#a855f7] to-[#06b6d4] text-white text-xs font-bold">
+            <div className="px-4 py-3 border-b border-border flex items-center gap-3 bg-gradient-to-r from-[#E05A47]/20 to-[#D4A359]/20">
+              <div className="relative grid h-9 w-9 place-items-center rounded-full bg-gradient-to-br from-[#E05A47] to-[#D4A359] text-white text-xs font-bold">
                 BP
                 <span className="absolute -bottom-0.5 -right-0.5 h-3 w-3 rounded-full bg-emerald-400 ring-2 ring-background" />
               </div>
@@ -151,7 +151,7 @@ export function ChatWidget() {
                     <div
                       className={`px-3.5 py-2.5 rounded-2xl text-sm leading-relaxed ${
                         m.role === "user"
-                          ? "bg-gradient-to-br from-[#a855f7] to-[#06b6d4] text-white rounded-br-sm"
+                          ? "bg-gradient-to-br from-[#E05A47] to-[#D4A359] text-white rounded-br-sm"
                           : "glass rounded-bl-sm"
                       }`}
                     >
@@ -183,12 +183,12 @@ export function ChatWidget() {
                 onChange={(e) => setInput(e.target.value)}
                 placeholder="Ask me anything…"
                 readOnly={typing}
-                className="flex-1 rounded-xl bg-white/[0.05] border border-border focus:border-[#a855f7] outline-none px-3 py-2 text-sm"
+                className="flex-1 rounded-xl bg-white/[0.05] border border-border focus:border-[#E05A47] outline-none px-3 py-2 text-sm"
               />
               <button
                 type="submit"
                 disabled={typing}
-                className="grid h-9 w-9 place-items-center rounded-xl bg-gradient-to-br from-[#a855f7] to-[#06b6d4] text-white hover:scale-105 transition-transform"
+                className="grid h-9 w-9 place-items-center rounded-xl bg-gradient-to-br from-[#E05A47] to-[#D4A359] text-[#1a1a1a] hover:scale-105 transition-transform"
                 aria-label="Send"
               >
                 <Send className="h-4 w-4" />

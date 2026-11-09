@@ -42,7 +42,8 @@ export function Profiles() {
                 className="mt-5 inline-flex items-center gap-1.5 text-sm font-medium relative"
                 style={{ color: p.color }}
               >
-                Visit Profile <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                Visit Profile{" "}
+                <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
               </span>
             </motion.a>
           );
@@ -61,7 +62,7 @@ export function Profiles() {
           A year of contributions on{" "}
           <a
             href="https://github.com/bhanuprakashpeddi-1432"
-            className="text-[#06b6d4] hover:text-[#a855f7]"
+            className="text-[#D4A359] hover:text-[#E05A47]"
             target="_blank"
             rel="noreferrer"
           >
@@ -70,7 +71,7 @@ export function Profiles() {
         </p>
         <div className="mt-5 rounded-xl bg-white/[0.03] border border-border p-5 overflow-x-auto">
           <img
-            src="https://ghchart.rshah.org/a855f7/bhanuprakashpeddi-1432"
+            src="https://ghchart.rshah.org/E05A47/bhanuprakashpeddi-1432"
             alt="GitHub contributions"
             className="w-full min-w-[600px]"
             loading="lazy"

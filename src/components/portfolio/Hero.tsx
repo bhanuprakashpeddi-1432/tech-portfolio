@@ -46,7 +46,10 @@ export function Hero() {
   };
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center pt-24 lg:pt-32 pb-20 bg-mesh">
+    <section
+      id="home"
+      className="relative min-h-screen flex items-center pt-24 lg:pt-32 pb-20 bg-mesh"
+    >
       <HeroOrbs />
       <div className="relative mx-auto max-w-7xl w-full px-4 sm:px-6 grid lg:grid-cols-[1.2fr_1fr] gap-8 lg:gap-16 items-center">
         <motion.div
@@ -58,7 +61,7 @@ export function Hero() {
             variants={fadeUp}
             className="inline-flex items-center gap-2 text-sm text-muted-foreground"
           >
-            <Sparkles className="h-4 w-4 text-[#a855f7]" /> Hey, I'm
+            <Sparkles className="h-4 w-4 text-[#E05A47]" /> Hey, I'm
           </motion.p>
           <motion.h1
             variants={fadeUp}
@@ -72,17 +75,17 @@ export function Hero() {
             variants={fadeUp}
             className="mt-5 h-8 text-xl sm:text-2xl font-medium text-foreground/90"
           >
-            <span className="text-[#06b6d4]">{role}</span>
-            <span className="inline-block w-[2px] h-6 bg-[#06b6d4] ml-1 align-middle animate-pulse" />
+            <span className="text-[#D4A359]">{role}</span>
+            <span className="inline-block w-[2px] h-6 bg-[#D4A359] ml-1 align-middle animate-pulse" />
           </motion.div>
 
           <motion.p
             variants={fadeUp}
             className="mt-6 max-w-xl text-muted-foreground leading-relaxed"
           >
-            I am a fresher seeking opportunities to build scalable, user-centric web
-            applications and AI/ML models with modern technologies. Passionate about clean
-            code, continuous learning, and solving complex problems.
+            I am a fresher seeking opportunities to build scalable, user-centric web applications
+            and AI/ML models with modern technologies. Passionate about clean code, continuous
+            learning, and solving complex problems.
           </motion.p>
 
           <motion.div variants={fadeUp} className="mt-8 flex flex-wrap gap-3">
@@ -92,7 +95,7 @@ export function Hero() {
                 e.preventDefault();
                 document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
               }}
-              className="group inline-flex items-center gap-2 rounded-xl px-5 py-3 font-medium bg-gradient-to-r from-[#a855f7] to-[#06b6d4] text-white shadow-lg shadow-[#a855f7]/30 hover:shadow-[#a855f7]/60 hover:scale-[1.03] transition-all"
+              className="group inline-flex items-center gap-2 rounded-xl px-5 py-3 font-medium bg-gradient-to-r from-[#E05A47] to-[#D4A359] text-[#1a1a1a] shadow-lg shadow-[#E05A47]/30 hover:shadow-[#E05A47]/60 hover:scale-[1.03] transition-all"
             >
               Let's Connect
               <ArrowRight className="h-4 w-4 group-hover:translate-x-0.5 transition-transform" />
@@ -110,7 +113,7 @@ export function Hero() {
             <a
               href="/Latest_resume.pdf"
               download="Bhanu_Prakash_Peddi_Resume.pdf"
-              className="group inline-flex items-center gap-2 rounded-xl px-5 py-3 font-medium border border-border glass hover:bg-white/5 hover:scale-[1.03] hover:border-[#10b981]/50 hover:text-[#10b981] transition-all"
+              className="group inline-flex items-center gap-2 rounded-xl px-5 py-3 font-medium border border-border glass hover:bg-white/5 hover:scale-[1.03] hover:border-[#D4A359]/50 hover:text-[#D4A359] transition-all"
             >
               <Download className="h-4 w-4 group-hover:translate-y-0.5 transition-transform" />
               Download Resume
@@ -122,7 +125,7 @@ export function Hero() {
               href="https://linkedin.com/in/bhanu-prakash-peddi"
               target="_blank"
               rel="noreferrer"
-              className="grid h-10 w-10 place-items-center rounded-xl glass hover:text-[#06b6d4] hover:scale-110 transition-all"
+              className="grid h-10 w-10 place-items-center rounded-xl glass hover:text-[#D4A359] hover:scale-110 transition-all"
               aria-label="LinkedIn"
             >
               <Linkedin className="h-4 w-4" />
@@ -131,7 +134,7 @@ export function Hero() {
               href="https://github.com/bhanuprakashpeddi-1432"
               target="_blank"
               rel="noreferrer"
-              className="grid h-10 w-10 place-items-center rounded-xl glass hover:text-[#a855f7] hover:scale-110 transition-all"
+              className="grid h-10 w-10 place-items-center rounded-xl glass hover:text-[#E05A47] hover:scale-110 transition-all"
               aria-label="GitHub"
             >
               <Github className="h-4 w-4" />

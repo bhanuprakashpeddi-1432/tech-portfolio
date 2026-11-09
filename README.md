@@ -31,6 +31,7 @@ This portfolio represents a complete architectural evolution from a standard Cre
 ## 🛠️ Built With
 
 ### Core Technologies
+
 - **TanStack Start** - Full-stack React framework
 - **React 19** - Modern React with hooks and Server Components capabilities
 - **TypeScript** - Strongly typed JavaScript
@@ -38,6 +39,7 @@ This portfolio represents a complete architectural evolution from a standard Cre
 - **Tailwind CSS v4** - Utility-first CSS framework
 
 ### Libraries & Tools
+
 - **shadcn/ui** - Reusable, accessible UI components (built on Radix UI)
 - **Framer Motion** - Smooth animations and transitions
 - **Lucide React** - Beautiful icon library
@@ -48,27 +50,32 @@ This portfolio represents a complete architectural evolution from a standard Cre
 ## 🎨 Key Features
 
 ### 🏠 **Interactive Homepage (Hero)**
+
 - Dynamic typing animation highlighting roles
 - Interactive 3D tilt effect on the profile image
 - Custom glowing orbital animations
 - Quick access buttons (Connect, Projects, Download Resume)
 
 ### 💼 **Projects Showcase**
+
 - Detailed project cards with descriptions
 - Live demo and GitHub links
 - Technology stack tags
 - Responsive grid layout
 
 ### 🛠️ **Skills Section**
+
 - Interactive skill cards categorized by domain (AI/ML, Frontend, Backend, etc.)
 - Progress indicators and hover effects
 
 ### 🎓 **Certifications & Learning**
+
 - Showcases completed credentials (RedHat, MongoDB, etc.)
 - Tracks currently ongoing courses and learning paths
 - Links to coding profiles (LeetCode, HackerRank, CodeChef)
 
 ### 👨‍💻 **About Me**
+
 - Personal story and background
 - Professional journey and tech stack expertise
 
@@ -77,6 +84,7 @@ This portfolio represents a complete architectural evolution from a standard Cre
 ## 🚀 Getting Started
 
 ### Prerequisites
+
 - **Node.js** (v20 or higher recommended)
 - **npm** or **bun**
 - Modern web browser
@@ -84,17 +92,20 @@ This portfolio represents a complete architectural evolution from a standard Cre
 ### Installation
 
 1. **Clone the repository**
+
    ```bash
    git clone https://github.com/bhanuprakashpeddi-1432/tech-portfolio.git
    cd tech-portfolio
    ```
 
 2. **Install dependencies**
+
    ```bash
    npm install
    ```
 
 3. **Start the development server**
+
    ```bash
    npm run dev
    ```
@@ -111,7 +122,7 @@ tech-portfolio/
 ├── public/                 # Static assets (Resume PDF)
 ├── src/
 │   ├── assets/             # Images and local assets
-│   ├── components/         
+│   ├── components/
 │   │   ├── portfolio/      # Custom portfolio sections (Hero, About, Projects, etc.)
 │   │   └── ui/             # shadcn/ui components (buttons, dialogs, etc.)
 │   ├── hooks/              # Custom React hooks
@@ -121,7 +132,7 @@ tech-portfolio/
 │   ├── router.tsx          # Router configuration
 │   ├── server.ts           # SSR server entry point
 │   └── start.ts            # Client entry point
-├── package.json            
+├── package.json
 ├── vite.config.ts          # Vite & TanStack config
 ├── tsconfig.json           # TypeScript configuration
 ├── tailwind.config.js      # Tailwind configuration
@@ -132,18 +143,22 @@ tech-portfolio/
 
 ## 🚀 Deployment
 
-This project uses **Nitro** under the hood, making it incredibly easy to deploy to modern serverless platforms. 
+This project uses **Nitro** under the hood, making it incredibly easy to deploy to modern serverless platforms.
 
 > **Note:** Because this uses Server-Side Rendering (SSR) via TanStack Start, standard static hosting (like GitHub Pages) is not recommended.
 
 ### Deploy to Vercel (Recommended)
+
 Vercel natively supports Vite and Nitro.
+
 1. Connect your GitHub repository to Vercel.
 2. Vercel will automatically detect the framework.
 3. Click **Deploy**.
 
 ### Deploy to Cloudflare Pages
+
 The project is pre-configured with the `@lovable.dev/vite-tanstack-config` which defaults to the `cloudflare-module` preset.
+
 1. Connect your repository to Cloudflare Pages.
 2. Build command: `npm run build`
 3. Output directory: `.output/public`
@@ -155,6 +170,7 @@ The project is pre-configured with the `@lovable.dev/vite-tanstack-config` which
 Hi! I'm **Bhanu Prakash Peddi**, a passionate Full-Stack Developer and AI/ML Enthusiast from Vijayawada, India. I love creating web applications that not only function flawlessly but also provide exceptional user experiences.
 
 ### 📞 Get In Touch
+
 - 📧 **Email:** [bhanuprakashpeddi5@gmail.com](mailto:bhanuprakashpeddi5@gmail.com)
 - 💼 **LinkedIn:** [bhanu-prakash-peddi](https://linkedin.com/in/bhanu-prakash-peddi)
 - 🐙 **GitHub:** [bhanuprakashpeddi-1432](https://github.com/bhanuprakashpeddi-1432)

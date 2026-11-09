@@ -48,7 +48,7 @@ function GradientBorder({
 }) {
   return (
     <div
-      className={`relative rounded-2xl p-[1px] bg-gradient-to-br from-white/10 via-white/5 to-white/10 hover:from-[#a855f7]/60 hover:via-[#06b6d4]/40 hover:to-[#f59e0b]/60 transition-colors ${className}`}
+      className={`relative rounded-2xl p-[1px] bg-gradient-to-br from-white/10 via-white/5 to-white/10 hover:from-[#E05A47]/60 hover:via-[#D4A359]/40 hover:to-[#D4A359]/60 transition-colors ${className}`}
     >
       {children}
     </div>
@@ -71,12 +71,12 @@ function FeaturedCard({
     >
       <GradientBorder>
         <div className="relative glass-strong rounded-2xl p-7 sm:p-10 overflow-hidden">
-          <div className="absolute -top-24 -right-24 h-72 w-72 rounded-full bg-[#a855f7]/20 blur-3xl pointer-events-none" />
-          <div className="absolute -bottom-24 -left-24 h-72 w-72 rounded-full bg-[#06b6d4]/20 blur-3xl pointer-events-none" />
+          <div className="absolute -top-24 -right-24 h-72 w-72 rounded-full bg-[#E05A47]/20 blur-3xl pointer-events-none" />
+          <div className="absolute -bottom-24 -left-24 h-72 w-72 rounded-full bg-[#D4A359]/20 blur-3xl pointer-events-none" />
           <div className="relative grid lg:grid-cols-[1.4fr_1fr] gap-8 items-center">
             <div>
-              <span className="inline-flex items-center gap-1.5 text-xs uppercase tracking-widest text-[#f59e0b]">
-                <Star className="h-3.5 w-3.5 fill-[#f59e0b]" /> Featured Project
+              <span className="inline-flex items-center gap-1.5 text-xs uppercase tracking-widest text-[#D4A359]">
+                <Star className="h-3.5 w-3.5 fill-[#D4A359]" /> Featured Project
               </span>
               <h3 className="mt-3 font-display font-bold text-3xl sm:text-4xl">{project.title}</h3>
               <p className="mt-4 text-muted-foreground leading-relaxed">{project.description}</p>
@@ -98,7 +98,7 @@ function FeaturedCard({
                 )}
                 <button
                   onClick={(event) => onOpen(event.currentTarget)}
-                  className="inline-flex items-center gap-2 rounded-xl px-4 py-2 text-sm bg-gradient-to-r from-[#a855f7] to-[#06b6d4] text-white shadow-lg shadow-[#a855f7]/30 hover:scale-[1.03] transition-all"
+                  className="inline-flex items-center gap-2 rounded-xl px-4 py-2 text-sm bg-gradient-to-r from-[#E05A47] to-[#D4A359] text-[#1a1a1a] shadow-lg shadow-[#E05A47]/30 hover:scale-[1.03] transition-all"
                 >
                   <Info className="h-4 w-4" /> Details
                 </button>
@@ -109,23 +109,23 @@ function FeaturedCard({
               <div className="absolute inset-0 grid place-items-center">
                 <div className="font-mono text-xs space-y-2 p-6 text-left text-muted-foreground">
                   <div>
-                    <span className="text-[#06b6d4]">const</span> grievance = {`{`}
+                    <span className="text-[#D4A359]">const</span> grievance = {`{`}
                   </div>
                   <div className="pl-4">
-                    <span className="text-[#a855f7]">status</span>:{" "}
-                    <span className="text-emerald-300">'open'</span>,
+                    <span className="text-[#E05A47]">status</span>:{" "}
+                    <span className="text-[#D4A359]">'open'</span>,
                   </div>
                   <div className="pl-4">
-                    <span className="text-[#a855f7]">priority</span>:{" "}
-                    <span className="text-amber-300">'high'</span>,
+                    <span className="text-[#E05A47]">priority</span>:{" "}
+                    <span className="text-[#E05A47]">'high'</span>,
                   </div>
                   <div className="pl-4">
-                    <span className="text-[#a855f7]">assignedTo</span>:{" "}
-                    <span className="text-emerald-300">'admin'</span>,
+                    <span className="text-[#E05A47]">assignedTo</span>:{" "}
+                    <span className="text-[#D4A359]">'admin'</span>,
                   </div>
                   <div className="pl-4">
-                    <span className="text-[#a855f7]">realtime</span>:{" "}
-                    <span className="text-orange-300">true</span>
+                    <span className="text-[#E05A47]">realtime</span>:{" "}
+                    <span className="text-[#E05A47]">true</span>
                   </div>
                   <div>{`}`}</div>
                 </div>
@@ -176,7 +176,7 @@ function ProjectCard({
                   target="_blank"
                   rel="noreferrer"
                   aria-label="GitHub"
-                  className="grid h-9 w-9 place-items-center rounded-lg glass hover:text-[#a855f7] hover:scale-110 transition-all"
+                  className="grid h-9 w-9 place-items-center rounded-lg glass hover:text-[#E05A47] hover:scale-110 transition-all"
                 >
                   <Github className="h-4 w-4" />
                 </a>
@@ -187,7 +187,7 @@ function ProjectCard({
                   target="_blank"
                   rel="noreferrer"
                   aria-label="Live demo"
-                  className="grid h-9 w-9 place-items-center rounded-lg glass hover:text-[#06b6d4] hover:scale-110 transition-all"
+                  className="grid h-9 w-9 place-items-center rounded-lg glass hover:text-[#D4A359] hover:scale-110 transition-all"
                 >
                   <ExternalLink className="h-4 w-4" />
                 </a>
@@ -195,7 +195,7 @@ function ProjectCard({
             </div>
             <button
               onClick={(event) => onOpen(event.currentTarget)}
-              className="inline-flex items-center gap-1.5 text-sm text-[#06b6d4] hover:text-[#a855f7] transition-colors"
+              className="inline-flex items-center gap-1.5 text-sm text-[#D4A359] hover:text-[#E05A47] transition-colors"
             >
               <Info className="h-4 w-4" /> Details
             </button>
@@ -209,7 +209,7 @@ function ProjectCard({
 function Tag({ children, muted = false }: { children: React.ReactNode; muted?: boolean }) {
   return (
     <span
-      className={`px-2.5 py-1 rounded-md text-xs font-medium border transition-colors hover:border-[#a855f7]/60 hover:text-foreground ${
+      className={`px-2.5 py-1 rounded-md text-xs font-medium border transition-colors hover:border-[#E05A47]/60 hover:text-foreground ${
         muted
           ? "bg-muted/30 border-border text-muted-foreground"
           : "bg-white/[0.03] border-border text-foreground/80"
@@ -322,7 +322,7 @@ function ProjectModal({
               href={project.live}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-2 rounded-xl px-4 py-2 text-sm bg-gradient-to-r from-[#a855f7] to-[#06b6d4] text-white"
+              className="inline-flex items-center gap-2 rounded-xl px-4 py-2 text-sm bg-gradient-to-r from-[#E05A47] to-[#D4A359] text-[#1a1a1a]"
             >
               <ExternalLink className="h-4 w-4" /> Live Demo
             </a>

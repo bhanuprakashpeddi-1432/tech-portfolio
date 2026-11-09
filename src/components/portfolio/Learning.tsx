@@ -24,8 +24,8 @@ function Ring({ progress }: { progress: number }) {
       />
       <defs>
         <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0%" stopColor="#a855f7" />
-          <stop offset="100%" stopColor="#06b6d4" />
+          <stop offset="0%" stopColor="#E05A47" />
+          <stop offset="100%" stopColor="#D4A359" />
         </linearGradient>
       </defs>
     </svg>
@@ -45,7 +45,7 @@ export function Learning() {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: i * 0.08 }}
             whileHover={{ y: -6 }}
-            className="glass rounded-2xl p-6 hover:shadow-[0_20px_60px_-20px_#a855f755] transition-shadow"
+            className="glass rounded-2xl p-6 hover:shadow-[0_20px_60px_-20px_#E05A4755] transition-shadow"
           >
             <div className="flex items-start gap-4">
               <div className="relative">
@@ -55,7 +55,7 @@ export function Learning() {
                 </div>
               </div>
               <div className="flex-1 min-w-0">
-                <span className="text-xs px-2 py-0.5 rounded-md bg-[#06b6d4]/10 text-[#06b6d4] border border-[#06b6d4]/30">
+                <span className="text-xs px-2 py-0.5 rounded-md bg-[#D4A359]/10 text-[#D4A359] border border-[#D4A359]/30">
                   {l.category}
                 </span>
                 <p className="mt-2 text-xs text-muted-foreground">{l.remaining}</p>

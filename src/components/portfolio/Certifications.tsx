@@ -5,13 +5,9 @@ import { CERTIFICATIONS } from "./data";
 
 export function Certifications() {
   return (
-    <Section
-      id="certifications"
-      label="Certifications"
-      title="Achievements & Credentials"
-    >
+    <Section id="certifications" label="Certifications" title="Achievements & Credentials">
       <div className="relative max-w-3xl mx-auto">
-        <div className="absolute left-4 sm:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-[#a855f7] via-[#06b6d4] to-[#f59e0b] opacity-40" />
+        <div className="absolute left-4 sm:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-[#E05A47] via-[#D4A359] to-[#D4A359] opacity-40" />
         <div className="space-y-10">
           {CERTIFICATIONS.map((c, i) => {
             const done = c.status === "Completed";
@@ -31,21 +27,25 @@ export function Certifications() {
                       <span
                         className={`inline-flex items-center gap-1 text-xs px-2 py-1 rounded-md ${
                           done
-                            ? "bg-emerald-400/15 text-emerald-300 border border-emerald-400/30"
-                            : "bg-amber-400/15 text-amber-300 border border-amber-400/30"
+                            ? "bg-[#D4A359]/15 text-[#D4A359] border border-[#D4A359]/30"
+                            : "bg-[#E05A47]/15 text-[#E05A47] border border-[#E05A47]/30"
                         }`}
                       >
-                        {done ? <CheckCircle2 className="h-3 w-3" /> : <Clock className="h-3 w-3" />}
+                        {done ? (
+                          <CheckCircle2 className="h-3 w-3" />
+                        ) : (
+                          <Clock className="h-3 w-3" />
+                        )}
                         {c.status}
                       </span>
-                      {c.year && (
-                        <span className="text-xs text-muted-foreground">{c.year}</span>
-                      )}
+                      {c.year && <span className="text-xs text-muted-foreground">{c.year}</span>}
                     </div>
                     <h3 className="font-display font-semibold text-lg">{c.title}</h3>
                     <p className="text-sm text-muted-foreground mt-1">{c.org}</p>
                     {c.tags && (
-                      <div className={`mt-3 flex flex-wrap gap-1.5 ${left ? "sm:justify-end" : ""}`}>
+                      <div
+                        className={`mt-3 flex flex-wrap gap-1.5 ${left ? "sm:justify-end" : ""}`}
+                      >
                         {c.tags.map((t) => (
                           <span
                             key={t}
@@ -61,7 +61,7 @@ export function Certifications() {
                         href={c.link}
                         target="_blank"
                         rel="noreferrer"
-                        className={`mt-4 inline-flex items-center gap-1.5 text-xs text-[#06b6d4] hover:text-[#a855f7] ${left ? "sm:flex-row-reverse" : ""}`}
+                        className={`mt-4 inline-flex items-center gap-1.5 text-xs text-[#D4A359] hover:text-[#E05A47] ${left ? "sm:flex-row-reverse" : ""}`}
                       >
                         <ExternalLink className="h-3 w-3" /> View Certificate
                       </a>
@@ -72,11 +72,11 @@ export function Certifications() {
                   className={`absolute left-4 sm:left-1/2 top-6 -translate-x-1/2 grid h-4 w-4 place-items-center`}
                 >
                   <span
-                    className={`relative h-3 w-3 rounded-full ${done ? "bg-emerald-400" : "bg-amber-400"} shadow-[0_0_12px_currentColor] text-current`}
-                    style={{ color: done ? "#34d399" : "#fbbf24" }}
+                    className={`relative h-3 w-3 rounded-full ${done ? "bg-[#D4A359]" : "bg-[#E05A47]"} shadow-[0_0_12px_currentColor] text-current`}
+                    style={{ color: done ? "#D4A359" : "#E05A47" }}
                   >
                     {!done && (
-                      <span className="absolute inset-0 rounded-full bg-amber-400 animate-ping opacity-75" />
+                      <span className="absolute inset-0 rounded-full bg-[#E05A47] animate-ping opacity-75" />
                     )}
                   </span>
                 </span>

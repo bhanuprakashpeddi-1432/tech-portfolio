@@ -7,19 +7,19 @@ const cards = [
     icon: GraduationCap,
     title: "Education",
     text: "Bachelor's in Computer Science with focus on Software Development and Data Structures.",
-    color: "#a855f7",
+    color: "#E05A47",
   },
   {
     icon: Rocket,
     title: "Passion",
     text: "Building scalable applications and exploring new technologies to solve real-world problems.",
-    color: "#06b6d4",
+    color: "#D4A359",
   },
   {
     icon: Code2,
     title: "Tech Stack",
     text: "React, JavaScript, Node.js, Java, MongoDB, PostgreSQL, Git, AWS, and modern web technologies.",
-    color: "#f59e0b",
+    color: "#A39E93",
   },
 ];
 

@@ -18,22 +18,22 @@ export const NAV_LINKS = [
 export const SKILL_CATEGORIES = [
   {
     name: "Frontend",
-    color: "#06b6d4",
+    color: "#D4A359",
     items: ["React", "Next.js", "JavaScript", "CSS"],
   },
   {
     name: "Backend",
-    color: "#10b981",
+    color: "#E05A47",
     items: ["Node.js", "Java", "SpringBoot", "FastAPI"],
   },
   {
     name: "Database",
-    color: "#f97316",
+    color: "#A39E93",
     items: ["SQL", "MongoDB"],
   },
   {
     name: "Cloud & Tools",
-    color: "#facc15",
+    color: "#D4A359",
     items: ["AWS", "GCP", "Git"],
   },
 ];
@@ -49,7 +49,6 @@ export type Project = {
 };
 
 export const PROJECTS: Project[] = [
-
   {
     title: "Collaborative Task Manager",
     description:

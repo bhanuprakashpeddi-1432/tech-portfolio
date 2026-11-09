@@ -38,7 +38,7 @@ export function Navbar() {
       <div className={`mx-auto max-w-7xl px-4 sm:px-6 ${scrolled ? "" : ""}`}>
         <div className="glass-strong rounded-2xl px-4 sm:px-6 py-3 flex items-center justify-between">
           <button onClick={() => go("home")} className="flex items-center gap-2 group">
-            <span className="grid h-9 w-9 place-items-center rounded-xl bg-gradient-to-br from-[#a855f7] to-[#06b6d4] font-display font-bold text-white shadow-lg shadow-[#a855f7]/40">
+            <span className="grid h-9 w-9 place-items-center rounded-xl bg-gradient-to-br from-[#E05A47] to-[#D4A359] font-display font-bold text-white shadow-lg shadow-[#E05A47]/40">
               BP
             </span>
             <span className="hidden sm:inline font-display font-semibold text-gradient">
@@ -57,7 +57,7 @@ export function Navbar() {
                 {active === l.id && (
                   <motion.span
                     layoutId="nav-underline"
-                    className="absolute left-2 right-2 -bottom-0.5 h-0.5 bg-gradient-to-r from-[#a855f7] to-[#06b6d4] rounded-full"
+                    className="absolute left-2 right-2 -bottom-0.5 h-0.5 bg-gradient-to-r from-[#E05A47] to-[#D4A359] rounded-full"
                   />
                 )}
               </button>
@@ -68,7 +68,7 @@ export function Navbar() {
             <a
               href="/Latest_resume.pdf"
               download="Bhanu_Prakash_Peddi_Resume.pdf"
-              className="hidden sm:inline-flex relative items-center gap-2 rounded-xl px-4 py-2 text-sm font-medium border border-[#a855f7]/50 text-foreground hover:bg-[#a855f7]/10 transition-all hover:shadow-[0_0_24px_-4px_#a855f7]"
+              className="hidden sm:inline-flex relative items-center gap-2 rounded-xl px-4 py-2 text-sm font-medium border border-[#E05A47]/50 text-foreground hover:bg-[#E05A47]/10 transition-all hover:shadow-[0_0_24px_-4px_#E05A47]"
             >
               <Download className="h-4 w-4" />
               Resume
@@ -99,7 +99,7 @@ export function Navbar() {
               <button
                 key={l.id}
                 onClick={() => go(l.id)}
-                className={`text-left px-3 py-2 rounded-lg text-sm ${active === l.id ? "bg-[#a855f7]/15 text-foreground" : "text-muted-foreground"}`}
+                className={`text-left px-3 py-2 rounded-lg text-sm ${active === l.id ? "bg-[#E05A47]/15 text-foreground" : "text-muted-foreground"}`}
               >
                 {l.label}
               </button>
@@ -107,7 +107,7 @@ export function Navbar() {
             <a
               href="/Latest_resume.pdf"
               download="Bhanu_Prakash_Peddi_Resume.pdf"
-              className="mt-2 inline-flex items-center justify-center gap-2 rounded-lg px-3 py-2 text-sm font-medium bg-gradient-to-r from-[#a855f7] to-[#06b6d4] text-white"
+              className="mt-2 inline-flex items-center justify-center gap-2 rounded-lg px-3 py-2 text-sm font-medium bg-gradient-to-r from-[#E05A47] to-[#D4A359] text-[#1a1a1a]"
             >
               <Download className="h-4 w-4" /> Download Resume
             </a>
