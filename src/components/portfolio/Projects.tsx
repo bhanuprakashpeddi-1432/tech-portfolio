@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Github, ExternalLink, Info, X, Star } from "lucide-react";
 import { Section } from "./Section";
@@ -6,21 +6,34 @@ import { PROJECTS, type Project } from "./data";
 
 export function Projects() {
   const [open, setOpen] = useState<Project | null>(null);
+  const openerRef = useRef<HTMLButtonElement | null>(null);
   const featured = PROJECTS.find((p) => p.featured)!;
   const rest = PROJECTS.filter((p) => !p.featured);
 
+  const openProject = (project: Project, opener: HTMLButtonElement) => {
+    openerRef.current = opener;
+    setOpen(project);
+  };
+
   return (
     <Section id="projects" label="Projects" title="Featured Work">
-      <FeaturedCard project={featured} onOpen={() => setOpen(featured)} />
+      <FeaturedCard project={featured} onOpen={(opener) => openProject(featured, opener)} />
 
       <div className="mt-8 grid md:grid-cols-2 xl:grid-cols-3 gap-6 auto-rows-[300px]">
         {rest.map((p, i) => (
-          <ProjectCard key={p.title} project={p} delay={i * 0.07} onOpen={() => setOpen(p)} />
+          <ProjectCard
+            key={p.title}
+            project={p}
+            delay={i * 0.07}
+            onOpen={(opener) => openProject(p, opener)}
+          />
         ))}
       </div>
 
       <AnimatePresence>
-        {open && <ProjectModal project={open} onClose={() => setOpen(null)} />}
+        {open && (
+          <ProjectModal project={open} opener={openerRef.current} onClose={() => setOpen(null)} />
+        )}
       </AnimatePresence>
     </Section>
   );
@@ -42,7 +55,13 @@ function GradientBorder({
   );
 }
 
-function FeaturedCard({ project, onOpen }: { project: Project; onOpen: () => void }) {
+function FeaturedCard({
+  project,
+  onOpen,
+}: {
+  project: Project;
+  onOpen: (opener: HTMLButtonElement) => void;
+}) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 30 }}
@@ -78,7 +97,7 @@ function FeaturedCard({ project, onOpen }: { project: Project; onOpen: () => voi
                   </a>
                 )}
                 <button
-                  onClick={onOpen}
+                  onClick={(event) => onOpen(event.currentTarget)}
                   className="inline-flex items-center gap-2 rounded-xl px-4 py-2 text-sm bg-gradient-to-r from-[#a855f7] to-[#06b6d4] text-white shadow-lg shadow-[#a855f7]/30 hover:scale-[1.03] transition-all"
                 >
                   <Info className="h-4 w-4" /> Details
@@ -126,7 +145,7 @@ function ProjectCard({
 }: {
   project: Project;
   delay: number;
-  onOpen: () => void;
+  onOpen: (opener: HTMLButtonElement) => void;
 }) {
   const visible = project.tags.slice(0, 4);
   const extra = project.tags.length - visible.length;
@@ -175,7 +194,7 @@ function ProjectCard({
               )}
             </div>
             <button
-              onClick={onOpen}
+              onClick={(event) => onOpen(event.currentTarget)}
               className="inline-flex items-center gap-1.5 text-sm text-[#06b6d4] hover:text-[#a855f7] transition-colors"
             >
               <Info className="h-4 w-4" /> Details
@@ -201,14 +220,53 @@ function Tag({ children, muted = false }: { children: React.ReactNode; muted?: b
   );
 }
 
-function ProjectModal({ project, onClose }: { project: Project; onClose: () => void }) {
+function ProjectModal({
+  project,
+  opener,
+  onClose,
+}: {
+  project: Project;
+  opener: HTMLButtonElement | null;
+  onClose: () => void;
+}) {
+  const dialogRef = useRef<HTMLDivElement>(null);
+  const closeButtonRef = useRef<HTMLButtonElement>(null);
+
   useEffect(() => {
+    closeButtonRef.current?.focus();
+
     const onKeyDown = (event: KeyboardEvent) => {
-      if (event.key === "Escape") onClose();
+      if (event.key === "Escape") {
+        onClose();
+        return;
+      }
+
+      if (event.key !== "Tab" || !dialogRef.current) return;
+
+      const focusable = dialogRef.current.querySelectorAll<HTMLElement>(
+        'button, a[href], input, select, textarea, [tabindex]:not([tabindex="-1"])',
+      );
+      if (focusable.length === 0) {
+        event.preventDefault();
+        return;
+      }
+
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        last.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first.focus();
+      }
     };
     document.addEventListener("keydown", onKeyDown);
-    return () => document.removeEventListener("keydown", onKeyDown);
-  }, [onClose]);
+    return () => {
+      document.removeEventListener("keydown", onKeyDown);
+      opener?.focus();
+    };
+  }, [onClose, opener]);
 
   return (
     <motion.div
@@ -226,9 +284,11 @@ function ProjectModal({ project, onClose }: { project: Project; onClose: () => v
         animate={{ scale: 1, opacity: 1 }}
         exit={{ scale: 0.95, opacity: 0 }}
         onClick={(e) => e.stopPropagation()}
+        ref={dialogRef}
         className="relative w-full max-w-2xl glass-strong rounded-2xl p-7"
       >
         <button
+          ref={closeButtonRef}
           onClick={onClose}
           aria-label="Close"
           className="absolute top-4 right-4 grid h-9 w-9 place-items-center rounded-lg hover:bg-white/5"

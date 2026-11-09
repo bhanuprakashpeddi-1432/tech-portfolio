@@ -49,6 +49,28 @@ export type Project = {
 };
 
 export const PROJECTS: Project[] = [
+
+  {
+    title: "Collaborative Task Manager",
+    description:
+      "A full-stack collaborative workspace platform for managing projects, Kanban tasks, team assignments, real-time updates, and project progress.",
+    longDescription:
+      "Role-based task management platform with JWT authentication, workspace-level authorization, Kanban boards, task assignment, comments, audit history, direct messaging, project reports, optimistic locking, real-time collaboration using WebSocket/STOMP and Redis, and Docker-based deployment.",
+    tags: [
+      "React",
+      "TypeScript",
+      "Java",
+      "Spring Boot",
+      "PostgreSQL",
+      "Redis",
+      "Docker",
+      "JWT",
+      "WebSocket",
+      "REST API",
+    ],
+    github: "https://github.com/bhanuprakashpeddi-1432/Collaborative-Task-Manager",
+    featured: true,
+  },
   {
     title: "Grievance Management System",
     description:
@@ -57,7 +79,6 @@ export const PROJECTS: Project[] = [
       "Full-featured platform with JWT authentication, role-based access (admin/user), real-time updates via Socket.io, status tracking, file attachments, email notifications, and an analytics dashboard for administrators.",
     tags: ["React", "Node.js", "MongoDB", "Express", "JWT", "Material-UI", "Socket.io", "REST API"],
     github: "https://github.com/bhanuprakashpeddi-1432/grievance-management-system",
-    featured: true,
   },
   {
     title: "Portfolio Website",

@@ -182,7 +182,7 @@ export function ChatWidget() {
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
                 placeholder="Ask me anything…"
-                disabled={typing}
+                readOnly={typing}
                 className="flex-1 rounded-xl bg-white/[0.05] border border-border focus:border-[#a855f7] outline-none px-3 py-2 text-sm"
               />
               <button
